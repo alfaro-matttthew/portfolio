@@ -1,5 +1,9 @@
 export default function Work() {
 
+  const background = {
+    backgroundColor: '#FBFCFA'
+  }
+
   const rowHeight = {
     height: "200px"
   }

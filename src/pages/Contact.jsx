@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 
 export default function Contact() {
 
+  const background = {
+    backgroundColor: '#FBFCFA'
+  }
+
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
