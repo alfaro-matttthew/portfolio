@@ -6,24 +6,24 @@ function NavTabs() {
   const currentPage = useLocation().pathname;
 
   return (
-    <div className='border p-4 d-flex justify-content-between'>
-      <div className='border d-flex align-items-center'>
-        <a className='c-nav pe-2 border text-decoration-none'>
+    <div className='mx-4 mb-5 p-4 border-bottom  d-flex justify-content-between'>
+      <div className=' d-flex align-items-center'>
+        <a className=' pe-2 font-serif text-decoration-none'>
         <Link
             to="/"
             // This is a conditional (ternary) operator that checks to see if the current page is "Home"
             // If it is, we set the current page to 'nav-link-active', otherwise we set it to 'nav-link'
             className={currentPage === '/' ? 'nav-link active' : 'nav-link'}
           >
-            Matthew Alfaro
+            matthew alfaro
           </Link>
         </a>
-        <span className='c-nav-two mb-1 pe-2 text-uppercase border'>
+        <span className='mb-1 pe-2 fw-light fs-5 font-san-serif text-uppercase '>
           Front-End Developer | Graphic Designer
         </span>
       </div>
-      <div className="border nav">
-        <a className="c-nav border nav-item text-decoration-none">
+      <div className=" nav">
+        <a className="  nav-item font-serif text-decoration-none">
           <Link
             to="/About"
             // Check to see if the currentPage is `About`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
@@ -32,7 +32,7 @@ function NavTabs() {
             about
           </Link>
         </a>
-        <a className="c-nav border nav-item text-decoration-none">
+        <a className=" nav-item font-serif text-decoration-none">
           <Link
             to="/Work"
             // Check to see if the currentPage is `Blog`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
@@ -41,7 +41,7 @@ function NavTabs() {
             work
           </Link>
         </a>
-        <a className="c-nav border nav-item text-decoration-none">
+        <a className=" nav-item font-serif text-decoration-none">
           <Link
             to="/Contact"
             // Check to see if the currentPage is `Contact`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link

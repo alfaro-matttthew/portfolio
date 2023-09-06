@@ -1,21 +1,44 @@
-.white-background {
+
+.white-background,
+body {
     background-color: #FBFCFA;
 }
 
-.test {
-    color: #28231D;
-    font-family: 'Pirata One', cursive;
-
-}
-
-.c-nav-two {
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: 300;
-    font-size: 20px;
-}
-
-.c-nav {
-    color: #28231D;
+.font-serif {
     font-family: 'Ramaraja', serif;
-    font-size: 18px;
+    color: #28231D;
+}
+
+.font-san-serif {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #28231D;
+    letter-spacing: -1px;
+    font-weight: 700;
+}
+
+.wide-tracking {
+    letter-spacing: 1px;
+}
+
+.image {
+    background-size: cover;
+    background-position: right;
+}
+
+.title {
+    font-size: 5rem
+}
+
+.about-img {
+    height: 600px;
+}
+
+.body-font {
+    font-family: 'Roboto', sans-serif;
+    color: #28231D;
+}
+
+::placeholder {
+    font-size: 12px;
+    padding: 0px;
 }
