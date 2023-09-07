@@ -22,12 +22,12 @@ function NavTabs() {
           Front-End Developer | Graphic Designer
         </span>
       </div>
-      <div className=" nav">
+      <div className=" nav ">
         <a className="  nav-item font-serif text-decoration-none">
           <Link
             to="/About"
             // Check to see if the currentPage is `About`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-            className={currentPage === '/About' ? 'nav-link active' : 'nav-link'}
+            className={currentPage === '/About' ? 'nav-link active text-dark' : 'nav-link text-dark'}
           >
             about
           </Link>
@@ -36,7 +36,7 @@ function NavTabs() {
           <Link
             to="/Work"
             // Check to see if the currentPage is `Blog`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-            className={currentPage === '/Work' ? 'nav-link active' : 'nav-link'}
+            className={currentPage === '/Work' ? 'nav-link active text-dark' : 'nav-link text-dark'}
           >
             work
           </Link>
@@ -45,7 +45,7 @@ function NavTabs() {
           <Link
             to="/Contact"
             // Check to see if the currentPage is `Contact`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-            className={currentPage === '/Contact' ? 'nav-link active' : 'nav-link'}
+            className={currentPage === '/Contact' ? 'nav-link active text-dark' : 'nav-link text-dark'}
           >
             contact
           </Link>

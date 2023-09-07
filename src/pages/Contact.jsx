@@ -29,6 +29,40 @@ export default function Contact() {
     console.log(formData);
   };
 
+  const handleBlur = (e) => {
+    const label = e.target.previousElementSibling;
+
+    const setup = {
+      input1: {
+        defaultMessage: "What's your first name?",
+        errorMessage: " First name must be filled out"
+      },
+      input2: {
+        defaultMessage: "Now how about your last name",
+        errorMessage: " Last name must be filled out"
+      },
+      input4: {
+        defaultMessage: "How can I get in contact with you?",
+        errorMessage: " Email must be filled out"
+      },
+      input5: {
+        defaultMessage: "What do you want to talk about?",
+        errorMessage: " A message must be filled out"
+      }
+    };
+    // console.log(formData.firstName);
+
+    if(e.target.value == '' && label.textContent == setup[label.id].defaultMessage + setup[label.id].errorMessage) {
+      label.style.color = 'crimson';
+    } else if (e.target.value == '') {
+      label.style.color = 'crimson';
+      label.append(setup[label.id].errorMessage);
+    } else {
+      label.textContent = setup[label.id].defaultMessage;
+      label.style.color = 'black';
+    }
+  };
+
   return (
     <div>
       <div className=' w-50 mb-4 d-flex justify-content-center'>
@@ -42,7 +76,7 @@ export default function Contact() {
           <form onSubmit={handleSubmit}>
             {/* fname */}
             <div className="mb-5 pb-1 border-bottom border-secondary">
-              <label htmlFor="firstName" className="body-font form-label">
+              <label id="input1" htmlFor="firstName" className="body-font form-label">
                 What's your first name?
               </label>
               <input
@@ -52,13 +86,14 @@ export default function Contact() {
                 name="firstName"
                 value={formData.firstName}
                 onChange={handleChange}
+                onBlur={handleBlur}
                 required
                 placeholder='Type your first name'
               />
             </div>
             {/* lname */}
             <div className="mb-5 pb-1 border-bottom border-secondary ">
-              <label htmlFor="lastName" className="body-font form-label">
+              <label id="input2" htmlFor="lastName" className="body-font form-label">
                 Now how about your last name
               </label>
               <input
@@ -68,13 +103,14 @@ export default function Contact() {
                 name="lastName"
                 value={formData.lastName}
                 onChange={handleChange}
+                onBlur={handleBlur}
                 required
                 placeholder='Type your last name'
               />
             </div>
             {/* business name */}
             <div className="mb-5 pb-1 border-bottom border-secondary ">
-              <label htmlFor="businessName" className="body-font form-label">
+              <label id="input3" htmlFor="businessName" className="body-font form-label">
                 Are you affiliated with a business?
               </label>
               <input
@@ -89,7 +125,7 @@ export default function Contact() {
             </div>
             {/* email */}
             <div className="mb-5 pb-1 border-bottom border-secondary">
-              <label htmlFor="email" className="body-font form-label">
+              <label id="input4" htmlFor="email" className="body-font form-label">
                 How can I get in contact with you?
               </label>
               <input
@@ -99,13 +135,14 @@ export default function Contact() {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
+                onBlur={handleBlur}
                 required
                 placeholder='Type your email address'
               />
             </div>
             {/* message */}
             <div className="pb-1 border-bottom border-secondary">
-              <label htmlFor="message" className="body-font form-label">
+              <label id="input5" htmlFor="message" className="body-font form-label">
                 What do you want to talk about?
               </label>
               <textarea
@@ -114,6 +151,7 @@ export default function Contact() {
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
+                onBlur={handleBlur}
                 required
                 rows="4"
                 placeholder='Write out your message here'
@@ -126,8 +164,34 @@ export default function Contact() {
             </button>
           </form>
         </div>
-        <div className='w-25'>
-          <h3 className='font-san-serif text-uppercase'>find me here too</h3>
+        <div className='w-25 d-flex flex-column align-items-start'>
+          <h3 className='mb-4 py-1 px-2 black-bg body-font-w text-uppercase'>find me here too</h3>
+          <ul>
+            <li className='mb-2 list-unstyled d-flex align-items-center'>
+              <img className='me-1' src='src/assets/icons8-github-25.svg'></img>
+              <a className=' text-decoration-none body-font'>GitHub</a>
+            </li>
+            <li className='mb-2 list-unstyled d-flex align-items-center'>
+              <img className='me-1' src='src/assets/icons8-linkedin-25.svg'></img>
+              <a className=' text-decoration-none body-font'>LinkedIn</a>
+            </li>
+          </ul>
+          <ul>
+            <li className='mb-2 list-unstyled d-flex align-items-center'>
+              <img className='me-1' src='src/assets/icons8-behance-25.svg'></img>
+              <a className=' text-decoration-none body-font'>Behance</a>
+            </li>
+            <li className='mb-2 list-unstyled d-flex align-items-center'>
+              <img className='me-1' src='src/assets/icons8-dribbble-25.svg'></img>
+              <a className=' text-decoration-none body-font'>Dribble</a>
+            </li>
+          </ul>
+          <ul>
+            <li className='mb-2 list-unstyled d-flex align-items-center'>
+              <img className='me-1' src='src/assets/icons8-gmail-logo.svg'></img>
+              <a className=' text-decoration-none body-font'>Email</a>
+            </li>
+          </ul>
         </div>
       </div>  
     </div>

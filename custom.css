@@ -4,6 +4,14 @@ body {
     background-color: #FBFCFA;
 }
 
+.black-bg {
+    background-color: #28231D;;
+}
+
+.white-fg {
+    color: #FBFCFA;
+}
+
 .font-serif {
     font-family: 'Ramaraja', serif;
     color: #28231D;
@@ -36,6 +44,11 @@ body {
 .body-font {
     font-family: 'Roboto', sans-serif;
     color: #28231D;
+}
+
+.body-font-w {
+    font-family: 'Roboto', sans-serif;
+    color: #FBFCFA;
 }
 
 ::placeholder {
