@@ -35,19 +35,19 @@ export default function Contact() {
     const setup = {
       input1: {
         defaultMessage: "What's your first name?",
-        errorMessage: " First name must be filled out"
+        errorMessage: " (First name must be filled out)"
       },
       input2: {
         defaultMessage: "Now how about your last name",
-        errorMessage: " Last name must be filled out"
+        errorMessage: " (Last name must be filled out)"
       },
       input4: {
         defaultMessage: "How can I get in contact with you?",
-        errorMessage: " Email must be filled out"
+        errorMessage: " (Email must be filled out)"
       },
       input5: {
         defaultMessage: "What do you want to talk about?",
-        errorMessage: " A message must be filled out"
+        errorMessage: " (A message must be filled out)"
       }
     };
     // console.log(formData.firstName);
@@ -165,7 +165,13 @@ export default function Contact() {
           </form>
         </div>
         <div className='w-25 d-flex flex-column align-items-start'>
-          <h3 className='mb-4 py-1 px-2 black-bg body-font-w text-uppercase'>find me here too</h3>
+          <h3 className='mb-4 py-1 px-4 black-bg body-font-w text-uppercase'>find me here too</h3>
+          <ul>
+            <li className='mb-2 list-unstyled d-flex align-items-center'>
+              <img className='me-1' src='src/assets/icons8-gmail-logo.svg'></img>
+              <a className=' text-decoration-none body-font'>matthewealfaro@gmail.com</a>
+            </li>
+          </ul>
           <ul>
             <li className='mb-2 list-unstyled d-flex align-items-center'>
               <img className='me-1' src='src/assets/icons8-github-25.svg'></img>
@@ -184,12 +190,6 @@ export default function Contact() {
             <li className='mb-2 list-unstyled d-flex align-items-center'>
               <img className='me-1' src='src/assets/icons8-dribbble-25.svg'></img>
               <a className=' text-decoration-none body-font'>Dribble</a>
-            </li>
-          </ul>
-          <ul>
-            <li className='mb-2 list-unstyled d-flex align-items-center'>
-              <img className='me-1' src='src/assets/icons8-gmail-logo.svg'></img>
-              <a className=' text-decoration-none body-font'>Email</a>
             </li>
           </ul>
         </div>

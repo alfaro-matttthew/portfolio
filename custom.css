@@ -8,6 +8,10 @@ body {
     background-color: #28231D;;
 }
 
+.black-transparent {
+    background-color:rgba(64, 57,43, 0.8);
+}
+
 .white-fg {
     color: #FBFCFA;
 }
@@ -15,6 +19,11 @@ body {
 .font-serif {
     font-family: 'Ramaraja', serif;
     color: #28231D;
+}
+
+.font-serif-w  {
+    font-family: 'Ramaraja', serif;
+    color: #FBFCFA;
 }
 
 .font-san-serif {
@@ -54,4 +63,8 @@ body {
 ::placeholder {
     font-size: 12px;
     padding: 0px;
+}
+
+.transition {
+    
 }
