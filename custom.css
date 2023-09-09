@@ -33,6 +33,10 @@ body {
     font-weight: 700;
 }
 
+.text-ssm {
+    font-size: 12px;
+}
+
 .wide-tracking {
     letter-spacing: 1px;
 }

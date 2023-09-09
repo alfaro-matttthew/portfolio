@@ -6,10 +6,10 @@ export default function About() {
   };
 
   return (
-    <div className="d-flex min-vh-100">
+    <div className="d-flex mx-5 min-vh-100">
       <div className=" w-25 mx-5 d-flex justify-content-end">
         <div 
-        className="w-75 bg-img image about-img"
+        className="w-100 bg-img image about-img"
         style={bgImageStyle}
         >
         </div>
@@ -17,7 +17,7 @@ export default function About() {
       <div className=" w-50 ">
         <div className="w-75 d-flex flex-column">
           <span className=" font-serif">
-            Hello There
+            hello there
           </span>
           <h2 className="font-san-serif text-uppercase">
             My Name is Matthew
@@ -36,7 +36,60 @@ export default function About() {
         </div>
       </div>
       <div className="w-25">
-          
+          <div className="container d-flex flex-column align-items-center">
+            <div className="col-12">
+                <h3 className='mb-4 py-1 px-4 black-bg body-font-w text-uppercase'>My Skillsets</h3>
+            </div>
+
+            <div className="col-10">
+              <h4 className="border-bottom border-dark font-serif fs-6 text-start">graphic design</h4>
+            </div>
+            <div className="col-9 mb-3 body-font">
+              <li className="list-unstyled lh-sm text-start">Photoshop</li>
+              <li className="list-unstyled lh-sm">Illustrator</li>
+              <li className="list-unstyled lh-sm text-start">InDesign</li>
+              <li className="list-unstyled lh-sm text-start">Premiere</li>
+            </div>
+
+            <div className="col-10">
+              <h4 className="border-bottom border-dark font-serif fs-6 text-start">languages & frameworks</h4>
+            </div>
+            <div className="col-9 mb-3 body-font">
+              <li className="list-unstyled lh-sm text-start">HTML</li>
+              <li className="list-unstyled lh-sm">CSS<span className="text-ssm opacity-75 fst-italic"> + bootstrap & tailwind</span></li>
+              <li className="list-unstyled lh-sm text-start">JavaScript</li>
+              <li className="list-unstyled lh-sm text-start">React</li>
+            </div>
+
+            <div className="col-10 ">
+              <h4 className="border-bottom border-dark font-serif fs-6 text-start">responsive design</h4>
+            </div>
+            <div className="col-9 mb-3 body-font">
+              <li className="list-unstyled lh-sm text-start">CSS Grid</li>
+              <li className="list-unstyled lh-sm">Flexbox</li>
+              <li className="list-unstyled lh-sm text-start">Media Queries</li>
+            </div>
+
+            <div className="col-10 ">
+              <h4 className="border-bottom border-dark font-serif fs-6 text-start">back-end devlopment</h4>
+            </div>
+            <div className="col-9 mb-3 body-font">
+              <li className="list-unstyled lh-sm text-start">Node.js</li>
+              <li className="list-unstyled lh-sm">Express.js</li>
+            </div>
+
+            <div className="col-10 ">
+              <h4 className="border-bottom border-dark font-serif fs-6 text-start">databases</h4>
+            </div>
+            <div className="col-9 mb-3 body-font">
+              <li className="list-unstyled lh-sm text-start">MySQL</li>
+              <li className="list-unstyled lh-sm">MongoDB</li>
+            </div>
+
+          <div>
+
+            </div>
+          </div>
       </div>
     </div>
   );
