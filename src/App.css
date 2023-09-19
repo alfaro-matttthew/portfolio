@@ -1,49 +1,79 @@
 /* @import 'custom';
 
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+
+.white-background,
+body {
+    background-color: #FBFCFA;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.black-bg {
+    background-color: #28231D;;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.black-transparent {
+    background-color:rgba(64, 57,43, 0.8);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.white-fg {
+    color: #FBFCFA;
 }
 
-.card {
-  padding: 2em;
+.font-serif {
+    font-family: 'Ramaraja', serif;
+    color: #28231D;
 }
 
-.read-the-docs {
-  color: #888;
+.font-serif-w  {
+    font-family: 'Ramaraja', serif;
+    color: #FBFCFA;
 }
 
-.white-background {
-  background-color: #FBFCFA;
-} */
+.font-san-serif {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #28231D;
+    letter-spacing: -1px;
+    font-weight: 700;
+}
 
+.text-ssm {
+    font-size: 12px;
+}
+
+.wide-tracking {
+    letter-spacing: 1px;
+}
+
+.image {
+    background-size: cover;
+    background-position: right;
+}
+
+.title {
+    font-size: 5rem
+}
+
+.about-img {
+    height: 600px;
+}
+
+.body-font {
+    font-family: 'Roboto', sans-serif;
+    color: #28231D;
+}
+
+.body-font-w {
+    font-family: 'Roboto', sans-serif;
+    color: #FBFCFA;
+}
+
+::placeholder {
+    font-size: 12px;
+    padding: 0px;
+}
+
+.transition {
+    
+}
+
+
+ */
