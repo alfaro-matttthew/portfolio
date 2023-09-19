@@ -1,7 +1,7 @@
 export default function About() {
 
   const bgImageStyle = {
-    backgroundImage: "url(src/assets/images/matthew-alfaro.jpeg)",
+    backgroundImage: "url(/images/matthew-alfaro.jpeg)",
     backgroundSize: 'cover',
   };
 
