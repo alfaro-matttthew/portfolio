@@ -1,3 +1,5 @@
+
+
 export default function About() {
 
   const bgImageStyle = {
@@ -12,6 +14,7 @@ export default function About() {
         className="w-100 bg-img image about-img"
         style={bgImageStyle}
         >
+          <img src="/images/matthew-alfaro.jpeg" />
         </div>
       </div>
       <div className=" w-50 ">
