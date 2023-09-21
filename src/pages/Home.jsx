@@ -4,10 +4,15 @@ export default function Home() {
     color: '#28231D'
   }
 
+  const bgImageStyle = {
+    backgroundImage: "url(./images/matthew-01.png)",
+    backgroundSize: 'cover',
+  };
+
   return (
-    <div className="min-vh-100 d-flex align-items-stretch">
-      <div className=" w-50 d-flex justify-content-center">
-        <div className="w-50 d-flex flex-column align-items-start" style={ color }>
+    <div className="min-vh-100 row">
+      <div className="col-5 d-flex justify-content-center">
+        <div className="w-50 d-flex flex-column align-items-start justify-content-center" style={ color }>
           <span className="font-serif fs-3 lh-1">creative</span>
           <h1 className="font-san-serif title lh-1 text-uppercase">
             Front-End Development
@@ -16,8 +21,11 @@ export default function Home() {
           <a href="/Contact" className="mt-5 px-5 py-2 font-san-serif fw-normal text-uppercase text-decoration-none wide-tracking border border-2 border-dark rounded-pill">Let's Chat</a>
           </div>
       </div>
-      <div className=" w-50">
-        //me
+      <div 
+        className="col-7"
+        style={bgImageStyle}
+      >
+
       </div>
     </div>
   );

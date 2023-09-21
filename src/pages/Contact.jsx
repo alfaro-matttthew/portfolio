@@ -73,7 +73,13 @@ export default function Contact() {
       </div>
       <div className='row'>
         <div className="min-vh-100 w-50 container">
-          <form onSubmit={handleSubmit}>
+          <form 
+           onSubmit={handleSubmit}
+           name='contact'
+           method='post'
+           data-netlify='true'
+          >
+
             {/* fname */}
             <div className="mb-5 pb-1 border-bottom border-secondary">
               <label id="input1" htmlFor="firstName" className="body-font form-label">
@@ -175,21 +181,45 @@ export default function Contact() {
           <ul>
             <li className='mb-2 list-unstyled d-flex align-items-center'>
               <img className='me-1' src='/svg/icons8-github-25.svg'></img>
-              <a className=' text-decoration-none body-font'>GitHub</a>
+              <a 
+                className=' text-decoration-none body-font'
+                href='https://github.com/alfaro-matttthew'
+                target='_blank'
+              >
+                GitHub
+              </a>
             </li>
             <li className='mb-2 list-unstyled d-flex align-items-center'>
               <img className='me-1' src='/svg/icons8-linkedin-25.svg'></img>
-              <a className=' text-decoration-none body-font'>LinkedIn</a>
+              <a 
+                className=' text-decoration-none body-font'
+                href='https://www.linkedin.com/in/alfaro-matthew/'
+                target='_blank'
+              >
+                LinkedIn
+              </a>
             </li>
           </ul>
           <ul>
             <li className='mb-2 list-unstyled d-flex align-items-center'>
               <img className='me-1' src='/svg/icons8-behance-25.svg'></img>
-              <a className=' text-decoration-none body-font'>Behance</a>
+              <a 
+                className=' text-decoration-none body-font'
+                href='https://www.behance.net/matthewalfaro2'
+                target='_blank'
+              >
+                Behance
+              </a>
             </li>
             <li className='mb-2 list-unstyled d-flex align-items-center'>
               <img className='me-1' src='/svg/icons8-dribbble-25.svg'></img>
-              <a className=' text-decoration-none body-font'>Dribble</a>
+              <a 
+                className=' text-decoration-none body-font'
+                href='https://dribbble.com/alfaro-matthew'
+                target='_blank'
+              >
+                Dribble
+              </a>
             </li>
           </ul>
         </div>
