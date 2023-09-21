@@ -168,27 +168,27 @@ export default function Contact() {
           <h3 className='mb-4 py-1 px-4 black-bg body-font-w text-uppercase'>find me here too</h3>
           <ul>
             <li className='mb-2 list-unstyled d-flex align-items-center'>
-              <img className='me-1' src='src/assets/icons8-gmail-logo.svg'></img>
+              <img className='me-1' src='/svg/icons8-gmail-logo.svg'></img>
               <a className=' text-decoration-none body-font'>matthewealfaro@gmail.com</a>
             </li>
           </ul>
           <ul>
             <li className='mb-2 list-unstyled d-flex align-items-center'>
-              <img className='me-1' src='src/assets/icons8-github-25.svg'></img>
+              <img className='me-1' src='/svg/icons8-github-25.svg'></img>
               <a className=' text-decoration-none body-font'>GitHub</a>
             </li>
             <li className='mb-2 list-unstyled d-flex align-items-center'>
-              <img className='me-1' src='src/assets/icons8-linkedin-25.svg'></img>
+              <img className='me-1' src='/svg/icons8-linkedin-25.svg'></img>
               <a className=' text-decoration-none body-font'>LinkedIn</a>
             </li>
           </ul>
           <ul>
             <li className='mb-2 list-unstyled d-flex align-items-center'>
-              <img className='me-1' src='src/assets/icons8-behance-25.svg'></img>
+              <img className='me-1' src='/svg/icons8-behance-25.svg'></img>
               <a className=' text-decoration-none body-font'>Behance</a>
             </li>
             <li className='mb-2 list-unstyled d-flex align-items-center'>
-              <img className='me-1' src='src/assets/icons8-dribbble-25.svg'></img>
+              <img className='me-1' src='/svg/icons8-dribbble-25.svg'></img>
               <a className=' text-decoration-none body-font'>Dribble</a>
             </li>
           </ul>
