@@ -33,7 +33,8 @@ export default function TestContact() {
   const { name, email, message } = formData;
 
   return (
-    <form name="testForm" onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit}>
+        <input type="hidden" name="form-name" value="contact" />
       <p>
         <label>
           Your Name: <input type="text" name="name" value={name} onChange={handleChange} />
