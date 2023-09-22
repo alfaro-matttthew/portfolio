@@ -59,13 +59,13 @@ export default function Work() {
       <div className=" w-50 m-5 p-2 d-flex justify-content-around">
           <button 
             onClick={() => handleComponentClick("A")}
-            className=' mb-4 py-1 px-4 border-0 black-bg fs-4 body-font-w text-uppercase text-decoration-none'
+            className='border-0 font-serif fs-4 text-lowercase site-bg'
           >
             Web Design
           </button>
           <button 
             onClick={() => handleComponentClick("B")}
-            className=' mb-4 py-1 px-4 border-0 black-bg fs-4 body-font-w text-uppercase text-decoration-none'
+            className='border-0 font-serif fs-4 text-lowercase site-bg'
           >
             Graphic Design
           </button>

@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
+import ContactForm from '.././components/ContactForm';
+import FormSuccess from '.././components/FormSuccess';
+
 
 export default function Contact() {
+
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 
   const [formData, setFormData] = useState({
     firstName: '',
@@ -18,23 +23,18 @@ export default function Contact() {
     });
   };
 
-  // const handleSubmit = (e) => {
+  const handleFormSubmit = (data) => {
+    // Save form data if needed
+    setFormData(data);
+    // Set the state to indicate that the form has been submitted
+    setIsFormSubmitted(true);
+  };
 
-  //   fetch("/", {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-  //     body: encode({ "form-name": "contact", formData })
-  //   })
-  //     .then(() => alert("Success!"))
-  //     .catch(error => alert(error));
-
-  //   e.preventDefault();
-
-
-
-  //   console.log(formData);
-  //   console.log("this form is submitting");
-  // };
+  const handleReset = () => {
+    // Reset the form data and set isFormSubmitted back to false
+    setFormData({});
+    setIsFormSubmitted(false);
+  };
 
   const handleBlur = (e) => {
     const label = e.target.previousElementSibling;
@@ -80,108 +80,11 @@ export default function Contact() {
       </div>
       <div className='row'>
         <div className="min-vh-100 w-50 container">
-
-          <form 
-           /*onSubmit={handleSubmit}*/
-           actions='/contacts'
-           name='contact'
-           method='post'
-          >
-            {/* netlify */}
-            <input type='hidden' name='form-name' value='contact' />
-
-            {/* fname */}
-            <div className="mb-5 pb-1 border-bottom border-secondary">
-              <label id="input1" htmlFor="firstName" className="body-font form-label">
-                What's your first name?
-              </label>
-              <input
-                type="text"
-                className="px-0 border-0 bg-transparent form-control"
-                id="firstName"
-                name="firstName"
-                value={formData.firstName}
-                onChange={handleChange}
-                onBlur={handleBlur}
-                required
-                placeholder='Type your first name'
-              />
-            </div>
-
-            {/* lname */}
-            <div className="mb-5 pb-1 border-bottom border-secondary ">
-              <label id="input2" htmlFor="lastName" className="body-font form-label">
-                Now how about your last name
-              </label>
-              <input
-                type="text"
-                className="px-0 border-0 bg-transparent form-control"
-                id="lastName"
-                name="lastName"
-                value={formData.lastName}
-                onChange={handleChange}
-                onBlur={handleBlur}
-                required
-                placeholder='Type your last name'
-              />
-            </div>
-
-            {/* business name */}
-            <div className="mb-5 pb-1 border-bottom border-secondary ">
-              <label id="input3" htmlFor="businessName" className="body-font form-label">
-                Are you affiliated with a business?
-              </label>
-              <input
-                type="text"
-                className="px-0 border-0 bg-transparent form-control"
-                id="businessName"
-                name="businessName"
-                value={formData.businessName}
-                onChange={handleChange}
-                placeholder='Type your busines name'
-              />
-            </div>
-
-            {/* email */}
-            <div className="mb-5 pb-1 border-bottom border-secondary">
-              <label id="input4" htmlFor="email" className="body-font form-label">
-                How can I get in contact with you?
-              </label>
-              <input
-                type="email"
-                className="px-0 border-0 bg-transparent form-control"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                onBlur={handleBlur}
-                required
-                placeholder='Type your email address'
-              />
-            </div>
-
-            {/* message */}
-            <div className="pb-1 border-bottom border-secondary">
-              <label id="input5" htmlFor="message" className="body-font form-label">
-                What do you want to talk about?
-              </label>
-              <textarea
-                className="px-0 border-0 bg-transparent body-font form-control"
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                onBlur={handleBlur}
-                required
-                rows="4"
-                placeholder='Write out your message here'
-              />
-            </div>
-
-            <button type="submit" className="mt-5 px-5 py-2 font-san-serif fw-normal text-uppercase text-decoration-none wide-tracking border border-2 border-dark rounded-pill bg-transparent">
-              Submit
-            </button>
-          </form>
+          {isFormSubmitted ? (
+            <FormSuccess name={formData.firstName} onReset={handleReset} />
+          ) : (
+            <ContactForm onSubmit={handleFormSubmit} />
+          )}
         </div>
         <div className='w-25 d-flex flex-column align-items-start'>
           <h3 className='mb-4 py-1 px-4 black-bg body-font-w text-uppercase'>find me here too</h3>
