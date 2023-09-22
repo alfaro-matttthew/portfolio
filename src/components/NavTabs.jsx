@@ -50,6 +50,15 @@ function Footer() {
             contact
           </Link>
         </a>
+        <a className=" nav-item font-serif text-decoration-none">
+          <Link
+            to="/TestContact"
+            // Check to see if the currentPage is `Contact`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
+            className={currentPage === '/Contact' ? 'nav-link active text-dark' : 'nav-link text-dark'}
+          >
+            test contact
+          </Link>
+        </a>
       </div>
     </div>
   );
