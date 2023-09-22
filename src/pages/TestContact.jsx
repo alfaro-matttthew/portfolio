@@ -1,58 +1,22 @@
 import React, { useState } from 'react';
 
-const encode = (data) => {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&");
-}
-
 export default function TestContact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: ""
-  });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+    const formStyles = {
+        display: 'flex',
+        flexDirection: 'column',
+        margin: '40px'
+    }
 
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...formData })
-    })
-      .then(() => alert("Success!"))
-      .catch(error => alert(error));
-  };
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const { name, email, message } = formData;
-
-  return (
-    <form onSubmit={handleSubmit}>
-        <input type="hidden" name="form-name" value="contact" />
-      <p>
-        <label>
-          Your Name: <input type="text" name="name" value={name} onChange={handleChange} />
-        </label>
-      </p>
-      <p>
-        <label>
-          Your Email: <input type="email" name="email" value={email} onChange={handleChange} />
-        </label>
-      </p>
-      <p>
-        <label>
-          Message: <textarea name="message" value={message} onChange={handleChange} />
-        </label>
-      </p>
-      <p>
-        <button type="submit">Send</button>
-      </p>
-    </form>
-  );
+    return (
+        <div>
+            <form style={formStyles} name='contact' action='/contacts' method='post'>
+                <input type='hidden' name='form-name' value='contact' />
+                <input required type='text' name='name' placeholder='Your Name' />
+                <input required type='email' name='email' placeholder='Your Email' />
+                <textarea required  name='message' placeholder='message' cols='30' rows='10' ></textarea>
+                <button type='submit'>Send a Message</button>
+            </form>
+        </div>
+    )
 }
