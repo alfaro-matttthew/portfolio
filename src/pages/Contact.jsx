@@ -18,23 +18,23 @@ export default function Contact() {
     });
   };
 
-  const handleSubmit = (e) => {
+  // const handleSubmit = (e) => {
 
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", formData })
-    })
-      .then(() => alert("Success!"))
-      .catch(error => alert(error));
+  //   fetch("/", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
+  //     body: encode({ "form-name": "contact", formData })
+  //   })
+  //     .then(() => alert("Success!"))
+  //     .catch(error => alert(error));
 
-    e.preventDefault();
+  //   e.preventDefault();
 
 
 
-    console.log(formData);
-    console.log("this form is submitting");
-  };
+  //   console.log(formData);
+  //   console.log("this form is submitting");
+  // };
 
   const handleBlur = (e) => {
     const label = e.target.previousElementSibling;
@@ -82,13 +82,13 @@ export default function Contact() {
         <div className="min-vh-100 w-50 container">
 
           <form 
-           onSubmit={handleSubmit}
+           /*onSubmit={handleSubmit}*/
+           actions='/contacts'
            name='contact'
            method='post'
-           data-netlify='true'
           >
             {/* netlify */}
-            {/* <input type="hidden" name="form-name" value="contact" /> */}
+            <input type='hidden' name='form-name' value='contact' />
 
             {/* fname */}
             <div className="mb-5 pb-1 border-bottom border-secondary">
