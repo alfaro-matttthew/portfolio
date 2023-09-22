@@ -2,10 +2,6 @@ import React, { useState } from 'react';
 
 export default function Contact() {
 
-  const background = {
-    backgroundColor: '#FBFCFA'
-  }
-
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -23,10 +19,21 @@ export default function Contact() {
   };
 
   const handleSubmit = (e) => {
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", formData })
+    })
+      .then(() => alert("Success!"))
+      .catch(error => alert(error));
+
     e.preventDefault();
-    // You can handle the form submission here, e.g., send the data to a server or perform validation.
-    // For now, we'll just log the form data.
+
+
+
     console.log(formData);
+    console.log("this form is submitting");
   };
 
   const handleBlur = (e) => {
@@ -73,12 +80,15 @@ export default function Contact() {
       </div>
       <div className='row'>
         <div className="min-vh-100 w-50 container">
+
           <form 
            onSubmit={handleSubmit}
            name='contact'
            method='post'
            data-netlify='true'
           >
+            {/* netlify */}
+            {/* <input type="hidden" name="form-name" value="contact" /> */}
 
             {/* fname */}
             <div className="mb-5 pb-1 border-bottom border-secondary">
@@ -97,6 +107,7 @@ export default function Contact() {
                 placeholder='Type your first name'
               />
             </div>
+
             {/* lname */}
             <div className="mb-5 pb-1 border-bottom border-secondary ">
               <label id="input2" htmlFor="lastName" className="body-font form-label">
@@ -114,6 +125,7 @@ export default function Contact() {
                 placeholder='Type your last name'
               />
             </div>
+
             {/* business name */}
             <div className="mb-5 pb-1 border-bottom border-secondary ">
               <label id="input3" htmlFor="businessName" className="body-font form-label">
@@ -129,6 +141,7 @@ export default function Contact() {
                 placeholder='Type your busines name'
               />
             </div>
+
             {/* email */}
             <div className="mb-5 pb-1 border-bottom border-secondary">
               <label id="input4" htmlFor="email" className="body-font form-label">
@@ -146,6 +159,7 @@ export default function Contact() {
                 placeholder='Type your email address'
               />
             </div>
+
             {/* message */}
             <div className="pb-1 border-bottom border-secondary">
               <label id="input5" htmlFor="message" className="body-font form-label">
@@ -165,7 +179,6 @@ export default function Contact() {
             </div>
 
             <button type="submit" className="mt-5 px-5 py-2 font-san-serif fw-normal text-uppercase text-decoration-none wide-tracking border border-2 border-dark rounded-pill bg-transparent">
-
               Submit
             </button>
           </form>
