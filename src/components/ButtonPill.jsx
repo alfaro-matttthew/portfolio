@@ -3,7 +3,7 @@ import { buttonClasslist } from "../../utils/commonClasslist";
 
 export default function ButtonPill({ title, ...props }) {
   return (
-    <button className={buttonClasslist} {...props}*/ >
+    <button className={buttonClasslist} /*{...props}*/ >
       {title}
     </button>
   );
