@@ -61,7 +61,7 @@ export default function ContactForm({ onSubmit }) {
         return (
             <form 
               onSubmit={handleSubmit}
-              actions='/contacts'
+              actions='/alfaromatthew.netlify.app'
               name='contact'
               method='post'
             >
