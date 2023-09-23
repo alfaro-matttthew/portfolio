@@ -40,7 +40,7 @@ export default function About() {
       <div className="w-25">
           <div className="container d-flex flex-column align-items-center">
             <div className="col-12">
-                <h3 className='mb-4 py-1 px-4 black-bg body-font-w text-uppercase'>My Skillsets</h3>
+                <h3 className='mb-4 py-1 px-4 black-bg body-font-w text-uppercase'>My Skill Sets</h3>
             </div>
 
             <div className="col-10">
