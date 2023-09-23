@@ -1,4 +1,4 @@
-import ButtonPill from "../components/ButtonPill";
+import ButtonPillNav from "../components/ButtonPillNav";
 
 export default function Home() {
 
@@ -20,7 +20,7 @@ export default function Home() {
             Front-End Development
           </h1>
           <span className="font-serif fs-3 lh-1">based in tampa, florida</span>
-          <ButtonPill title={"Let's Chat"} />
+          <ButtonPillNav title={"Let's Chat"} path={'/Contact'} style={{color: '#28231D'}}/>
         </div>
       </div>
       <div 
