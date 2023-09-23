@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function ProjectCard({ title, technologies, imageSrc, liveLink, repoLink }) {
+export default function ProjectCard({ title, technologies, imageSrc, liveLink, repoLink, caseStudyLink, design }) {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -17,6 +17,11 @@ export default function ProjectCard({ title, technologies, imageSrc, liveLink, r
     transition: 'opacity 0.3s ease-in-out'
   };
 
+  const designStatus = design
+  const web = 'A'
+  const graphic = 'B'
+  console.log(designStatus);
+
   return (
     <div className="card pb-5 border-0 site-bg mx-2">
       <div className="card-img-top bg-img gx-0 row" style={{ height: '400px' }}>
@@ -32,16 +37,23 @@ export default function ProjectCard({ title, technologies, imageSrc, liveLink, r
           onMouseLeave={handleMouseLeave}
         >
           <div className="h-100 w-100 black-transparent d-flex justify-content-center align-items-center" style={overlayStyle}>
-            {liveLink && (
-              <a href={liveLink} target="_blank" className="px-2 fs-5 font-serif-w text-decoration-none">
-                live site
-              </a>
-            )}
-            {repoLink && (
-              <a href={repoLink} target="_blank" className="px-2 fs-5 border-start font-serif-w text-decoration-none">
-                github repo
-              </a>
-            )}
+            {
+              designStatus === 'web' ? 
+              <div>
+                <a href={liveLink} target="_blank" className="px-2 fs-5 font-serif-w text-decoration-none">
+                  live site
+                </a>
+                <a href={repoLink} target="_blank" className="px-2 fs-5 border-start font-serif-w text-decoration-none">
+                  github repo
+                </a>
+              </div>
+              : 
+              <div>
+                <a href={caseStudyLink} target="_blank" className="px-2 fs-5 font-serif-w text-decoration-none">
+                  case study
+                </a>
+              </div> 
+            }
           </div>
         </div>
       </div>

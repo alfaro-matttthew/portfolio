@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ButtonPill from './ButtonPill';
 
 export default function ContactForm({ onSubmit }) {
 
@@ -155,12 +156,7 @@ export default function ContactForm({ onSubmit }) {
                     />
                 </div>
 
-                <button 
-                  type="submit" 
-                  className="mt-5 px-5 py-2 font-san-serif fw-normal text-uppercase text-decoration-none wide-tracking border border-2 border-dark rounded-pill bg-transparent"
-                >
-                    Submit
-                </button>
+                <ButtonPill title={'Submit'} type={'submit'} />
             </form>
         )
 }

@@ -1,3 +1,5 @@
+import ButtonPill from "../components/ButtonPill";
+
 export default function Home() {
 
   const color = {
@@ -18,8 +20,8 @@ export default function Home() {
             Front-End Development
           </h1>
           <span className="font-serif fs-3 lh-1">based in tampa, florida</span>
-          <a href="/Contact" className="mt-5 px-5 py-2 font-san-serif fw-normal text-uppercase text-decoration-none wide-tracking border border-2 border-dark rounded-pill">Let's Chat</a>
-          </div>
+          <ButtonPill title={"Let's Chat"} />
+        </div>
       </div>
       <div 
         className="col-7"

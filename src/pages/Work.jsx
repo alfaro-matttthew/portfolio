@@ -1,6 +1,11 @@
 import { useState } from 'react';
+
 import WebDesignWork from '../components/WebDesignWork';
 import GraphicDesignWork from '../components/GraphicDesignWork';
+
+import { inactiveButton } from '../../utils/commonClasslist';
+import { activeButton } from '../../utils/commonClasslist';
+
 
 
 export default function Work() {
@@ -59,13 +64,21 @@ export default function Work() {
       <div className=" w-50 m-5 p-2 d-flex justify-content-around">
           <button 
             onClick={() => handleComponentClick("A")}
-            className='border-0 font-serif fs-4 text-lowercase site-bg'
+            className={
+              activeComponent === "A"
+                ? activeButton
+                : inactiveButton
+            }
           >
             Web Design
           </button>
           <button 
             onClick={() => handleComponentClick("B")}
-            className='border-0 font-serif fs-4 text-lowercase site-bg'
+            className={
+              activeComponent === "B"
+              ? activeButton
+              : inactiveButton
+            }
           >
             Graphic Design
           </button>

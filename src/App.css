@@ -4,7 +4,7 @@
 
 .white-background,
 body {
-    background-color: #FBFCFA;
+    background-color: #FAF5EF;
 }
 
 .black-bg {
@@ -16,24 +16,46 @@ body {
 }
 
 .white-fg {
-    color: #FBFCFA;
+    color: #FAF5EF;
+}
+
+.button-color {
+    border-color: #28231D;
+    color: #28231D;
+    transition: 0.2s ease-in-out;
+}
+
+.button-color:hover {
+    border-color: #cdb69a;
+    color: #b7a38b;
+}
+
+.font-serif, 
+.font-serif-w {
+    font-family: 'Ramaraja', serif;
 }
 
 .font-serif {
-    font-family: 'Ramaraja', serif;
     color: #28231D;
 }
 
 .font-serif-w  {
-    font-family: 'Ramaraja', serif;
-    color: #FBFCFA;
+    color: #FAF5EF;
+}
+
+.font-san-serif,
+.font-san-serif-w {
+    font-family: 'Roboto Condensed', sans-serif;
+    letter-spacing: -1px;
+    font-weight: 700;
 }
 
 .font-san-serif {
-    font-family: 'Roboto Condensed', sans-serif;
     color: #28231D;
-    letter-spacing: -1px;
-    font-weight: 700;
+}
+
+.font-san-serif-w {
+    color: #FAF5EF;
 }
 
 .text-ssm {
@@ -64,7 +86,7 @@ body {
 
 .body-font-w {
     font-family: 'Roboto', sans-serif;
-    color: #FBFCFA;
+    color: #FAF5EF;
 }
 
 ::placeholder {
