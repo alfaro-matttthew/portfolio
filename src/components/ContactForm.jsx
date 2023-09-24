@@ -60,15 +60,14 @@ export default function ContactForm({ onSubmit }) {
 
         return (
             <form 
-              onSubmit={handleSubmit}
-              actions='/alfaromatthew.netlify.app'
-              name='contact'
-              method='post'
+              // onSubmit={handleSubmit}
+              // actions='/alfaromatthew.netlify.app'
+              // name='contact'
+              // method='post'
             >
-                {/* netlify */}
-                <input type='hidden' name='form-name' value='contact' />
 
-                {/* fname */}
+                {/* <input type='hidden' name='form-name' value='contact' />
+
                 <div className="mb-5 pb-1 border-bottom border-secondary">
                     <label id="input1" htmlFor="firstName" className="body-font form-label">
                         What's your first name?
@@ -86,7 +85,6 @@ export default function ContactForm({ onSubmit }) {
                     />
                 </div>
 
-                {/* lname */}
                 <div className="mb-5 pb-1 border-bottom border-secondary ">
                     <label id="input2" htmlFor="lastName" className="body-font form-label">
                         Now how about your last name
@@ -104,7 +102,6 @@ export default function ContactForm({ onSubmit }) {
                     />
                 </div>
 
-                {/* business name */}
                 <div className="mb-5 pb-1 border-bottom border-secondary ">
                     <label id="input3" htmlFor="businessName" className="body-font form-label">
                         Are you affiliated with a business?
@@ -120,7 +117,6 @@ export default function ContactForm({ onSubmit }) {
                     />
                 </div>
 
-                {/* email */}
                 <div className="mb-5 pb-1 border-bottom border-secondary">
                     <label id="input4" htmlFor="email" className="body-font form-label">
                         How can I get in contact with you?
@@ -138,7 +134,6 @@ export default function ContactForm({ onSubmit }) {
                     />
                 </div>
 
-                {/* message */}
                 <div className="pb-1 border-bottom border-secondary">
                     <label id="input5" htmlFor="message" className="body-font form-label">
                         What do you want to talk about?
@@ -155,8 +150,7 @@ export default function ContactForm({ onSubmit }) {
                       placeholder='Write out your message here'
                     />
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-                {/* <ButtonPill title={'Submit'} type={'submit'} btnType={'input'} /> */}
+                <button type='submit'>Send a Message</button> */}
             </form>
         )
 }
