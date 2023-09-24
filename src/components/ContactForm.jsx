@@ -68,7 +68,7 @@ export default function ContactForm({ onSubmit }) {
 
         return (
 
-          <form name='contact' action='/contacts' method='post'>
+          <form onSubmit={handleSubmit} name='contact' action='/contacts' method='post'>
             <input type='hidden' name='form-name' value='contact' />
             <input required type='text' name='firstName' placeholder='first name' />
             <input required type='text' name='lastName' placeholder='last Name' />
