@@ -12,7 +12,9 @@ export default function ContactForm({ onSubmit }) {
     //   });
 
       const [formData, setFormData] = useState({
-        name: '',
+        firstName: '',
+        lastName: '',
+        businessName: '',
         email: '',
         message: '',
       });
@@ -68,7 +70,9 @@ export default function ContactForm({ onSubmit }) {
 
           <form name='contact' action='/contacts' method='post'>
             <input type='hidden' name='form-name' value='contact' />
-            <input required type='text' name='name' placeholder='Your Name' />
+            <input required type='text' name='firstName' placeholder='first name' />
+            <input required type='text' name='lastName' placeholder='last Name' />
+            <input required type='text' name='businessName' placeholder='business Name' />
             <input required type='email' name='email' placeholder='Your Email' />
             <textarea required  name='message' placeholder='message' cols='30' rows='10' ></textarea>
             <button type='submit'>Send a Message</button>
