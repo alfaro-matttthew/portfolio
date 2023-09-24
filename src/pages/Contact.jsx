@@ -93,7 +93,7 @@ export default function Contact() {
           ) : (
             <ContactForm onSubmit={handleFormSubmit} />
           )}
-          
+
         </div>
         <div className='w-25 d-flex flex-column align-items-start'>
           <h3 className='mb-4 py-1 px-4 black-bg body-font-w text-uppercase'>find me here too</h3>
