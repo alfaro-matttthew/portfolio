@@ -155,8 +155,8 @@ export default function ContactForm({ onSubmit }) {
                       placeholder='Write out your message here'
                     />
                 </div>
-                {/* <button type="submit" class="btn btn-primary">Submit</button> */}
-                <ButtonPill title={'Submit'} type={'submit'} btnType={'input'} />
+                <button type="submit" class="btn btn-primary">Submit</button>
+                {/* <ButtonPill title={'Submit'} type={'submit'} btnType={'input'} /> */}
             </form>
         )
 }
