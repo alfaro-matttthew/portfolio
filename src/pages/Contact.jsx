@@ -33,17 +33,17 @@ export default function Contact() {
 
   const handleFormSubmit = (/*data*/) => {
     // Add a one-second (1000 milliseconds) delay before proceeding
-    setTimeout(() => {
+
       // Save form data if needed
-     /* setFormData(data);*/
+      setFormData(data);
       // Set the state to indicate that the form has been submitted
       setIsFormSubmitted(true);
-    }, 1000); // 1000 milliseconds = 1 second
+
   };
 
   const handleReset = () => {
     // Reset the form data and set isFormSubmitted back to false
-   /* setFormData({});*/
+    setFormData({});
     setIsFormSubmitted(false);
   };
 
@@ -94,7 +94,7 @@ export default function Contact() {
           {isFormSubmitted ? (
             <FormSuccess name={formData.firstName} onReset={handleReset} />
           ) : (
-            <ContactForm onSubmit={handleFormSubmit} />
+            <ContactForm onFormSubmit={handleFormSubmit} />
           )}
 
         </div>
