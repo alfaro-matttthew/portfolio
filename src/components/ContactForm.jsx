@@ -72,7 +72,7 @@ export default function ContactForm({ onSubmit }) {
             {/* <button type='submit'>Send a Message</button> */}
           {/* </form> */}
 
-          <form onSubmit={handleSubmit} name='contact' action='/contacts' method='post'>
+          <form /*onSubmit={handleSubmit}*/ name='contact' action='/contacts' method='post'>
 
             <input type='hidden' name='form-name' value='contact' />
 
