@@ -53,7 +53,7 @@ export default function ContactForm({ onSubmit }) {
         };
 
         const handleSubmit = (e) => {
-            // e.preventDefault();
+            e.preventDefault();
 
             onSubmit({ firstName, lastName, businessName, email, message })
         }
