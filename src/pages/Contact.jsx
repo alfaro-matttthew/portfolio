@@ -87,7 +87,7 @@ export default function Contact() {
       <div className='row'>
         <div className="min-vh-100 w-50 container">
 
-            <form style={formStyles} name='contact' action='/contacts' method='post'>
+            <form name='contact' action='/contacts' method='post'>
                 <input type='hidden' name='form-name' value='contact' />
                 <input required type='text' name='name' placeholder='Your Name' />
                 <input required type='email' name='email' placeholder='Your Email' />
