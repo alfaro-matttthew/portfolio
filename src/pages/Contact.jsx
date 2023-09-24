@@ -7,10 +7,16 @@ export default function Contact() {
 
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 
+  // const [formData, setFormData] = useState({
+  //   firstName: '',
+  //   lastName: '',
+  //   businessName: '',
+  //   email: '',
+  //   message: '',
+  // });
+
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    businessName: '',
+    name: '',
     email: '',
     message: '',
   });
@@ -80,11 +86,17 @@ export default function Contact() {
       </div>
       <div className='row'>
         <div className="min-vh-100 w-50 container">
-          {isFormSubmitted ? (
+        <form name='contact' netlify netlify-honeybot='bot-field' hidden>
+          <input type='text' name='name' />
+          <input type='email' name='email' />
+          <textarea name='message'></textarea>
+        </form>
+
+          {/* {isFormSubmitted ? (
             <FormSuccess name={formData.firstName} onReset={handleReset} />
           ) : (
             <ContactForm onSubmit={handleFormSubmit} />
-          )}
+          )} */}
         </div>
         <div className='w-25 d-flex flex-column align-items-start'>
           <h3 className='mb-4 py-1 px-4 black-bg body-font-w text-uppercase'>find me here too</h3>
