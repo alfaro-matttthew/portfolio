@@ -55,7 +55,7 @@ export default function ContactForm({ onSubmit }) {
         const handleSubmit = (e) => {
             e.preventDefault();
 
-            onSubmit({ firstName, lastName, businessName, email, message })
+            onSubmit(/*{ firstName, lastName, businessName, email, message }*/)
         }
 
         return (
