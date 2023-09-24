@@ -16,7 +16,9 @@ export default function Contact() {
   // });
 
   const [formData, setFormData] = useState({
-    name: '',
+    firstName: '',
+    lastName: '',
+    businessName: '',
     email: '',
     message: '',
   });
@@ -63,7 +65,6 @@ export default function Contact() {
         errorMessage: " (A message must be filled out)"
       }
     };
-    // console.log(formData.firstName);
 
     if(e.target.value == '' && label.textContent == setup[label.id].defaultMessage + setup[label.id].errorMessage) {
       label.style.color = 'crimson';
@@ -87,19 +88,12 @@ export default function Contact() {
       <div className='row'>
         <div className="min-vh-100 w-50 container">
 
-            {/* <form name='contact' action='/contacts' method='post'>
-                <input type='hidden' name='form-name' value='contact' />
-                <input required type='text' name='name' placeholder='Your Name' />
-                <input required type='email' name='email' placeholder='Your Email' />
-                <textarea required  name='message' placeholder='message' cols='30' rows='10' ></textarea>
-                <button type='submit'>Send a Message</button>
-            </form> */}
-
           {isFormSubmitted ? (
             <FormSuccess name={formData.firstName} onReset={handleReset} />
           ) : (
             <ContactForm onSubmit={handleFormSubmit} />
           )}
+          
         </div>
         <div className='w-25 d-flex flex-column align-items-start'>
           <h3 className='mb-4 py-1 px-4 black-bg body-font-w text-uppercase'>find me here too</h3>

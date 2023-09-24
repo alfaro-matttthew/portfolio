@@ -3,14 +3,6 @@ import ButtonPill from './ButtonPill';
 
 export default function ContactForm({ onSubmit }) {
 
-    // const [formData, setFormData] = useState({
-    //     firstName: '',
-    //     lastName: '',
-    //     businessName: '',
-    //     email: '',
-    //     message: '',
-    //   });
-
       const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
@@ -67,25 +59,22 @@ export default function ContactForm({ onSubmit }) {
         }
 
         return (
+<div>
+
+
+          {/* <form onSubmit={handleSubmit} name='contact' action='/contacts' method='post'> */}
+            {/* <input type='hidden' name='form-name' value='contact' /> */}
+            {/* <input required type='text' name='firstName' placeholder='first name' /> */}
+            {/* <input required type='text' name='lastName' placeholder='last Name' /> */}
+            {/* <input required type='text' name='businessName' placeholder='business Name' /> */}
+            {/* <input required type='email' name='email' placeholder='Your Email' /> */}
+            {/* <textarea required  name='message' placeholder='message' cols='30' rows='10' ></textarea> */}
+            {/* <button type='submit'>Send a Message</button> */}
+          {/* </form> */}
 
           <form onSubmit={handleSubmit} name='contact' action='/contacts' method='post'>
+
             <input type='hidden' name='form-name' value='contact' />
-            <input required type='text' name='firstName' placeholder='first name' />
-            <input required type='text' name='lastName' placeholder='last Name' />
-            <input required type='text' name='businessName' placeholder='business Name' />
-            <input required type='email' name='email' placeholder='Your Email' />
-            <textarea required  name='message' placeholder='message' cols='30' rows='10' ></textarea>
-            <button type='submit'>Send a Message</button>
-          </form>
-
-            // <form 
-              // onSubmit={handleSubmit}
-              // actions='/alfaromatthew.netlify.app'
-              // name='contact'
-              // method='post'
-            // >
-
-                /* <input type='hidden' name='form-name' value='contact' />
 
                 <div className="mb-5 pb-1 border-bottom border-secondary">
                     <label id="input1" htmlFor="firstName" className="body-font form-label">
@@ -169,7 +158,8 @@ export default function ContactForm({ onSubmit }) {
                       placeholder='Write out your message here'
                     />
                 </div>
-                <button type='submit'>Send a Message</button> */
-            // </form>
+                  <button type='submit'>Submit</button>
+             </form>
+  </div>
         )
 }
