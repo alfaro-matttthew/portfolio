@@ -36,7 +36,7 @@ export default function ProjectCard({ title, technologies, imageSrc, liveLink, r
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <div className="h-100 w-100 black-transparent d-none d-md-flex justify-content-center align-items-center " style={overlayStyle}>
+          <div className="h-100 w-100 black-transparent d-none d-lg-flex justify-content-center align-items-center " style={overlayStyle}>
             {
               designStatus === 'web' ? 
               <div>
@@ -69,7 +69,7 @@ export default function ProjectCard({ title, technologies, imageSrc, liveLink, r
               </span>
             ))}
           </div>
-          <div className='mt-3'>
+          <div className='mt-3 d-lg-none'>
            
               {
                 designStatus === 'web' ? 
