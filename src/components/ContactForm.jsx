@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ButtonPill from './ButtonPill';
+import { buttonClasslist } from '../../utils/commonClasslist';
 
 export default function ContactForm({ onSubmit }) {
 
@@ -158,7 +159,7 @@ export default function ContactForm({ onSubmit }) {
                       placeholder='Write out your message here'
                     />
                 </div>
-                  <button type='submit'>Submit</button>
+                  <button className={buttonClasslist} type='submit'>Submit</button>
              </form> 
   </div>
         )
