@@ -19,7 +19,7 @@ export default function Home() {
         </div>
       </div>
       <div 
-        className=" home-end col-12 col-lg-7 d-none d-lg-block"
+        className="home-end col-12 col-lg-7 d-none d-lg-block"
       >
 
       </div>
