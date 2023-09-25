@@ -10,7 +10,7 @@ export default function TestContact() {
 
     return (
         <div>
-            <form 
+            {/* <form 
                 style={formStyles} 
                 name='contact v1' 
                 action='/contacts' 
@@ -36,7 +36,7 @@ export default function TestContact() {
                 </div>
 
                 <button type='submit'>Send a Message</button>
-            </form>
+            </form> */}
         </div>
         // <div>
         //     <form style={formStyles} name='contact' action='/contacts' method='post'>
