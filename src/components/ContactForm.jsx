@@ -60,7 +60,7 @@ export default function ContactForm({ onSubmit }) {
         }
 
         return (
-<div>
+<div className='px-2'>
 
 
           {/* <form onSubmit={handleSubmit} name='contact' action='/contacts' method='post'> */}

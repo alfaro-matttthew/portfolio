@@ -14,7 +14,7 @@ function App() {
   return (
     <div className='site-bg'>
       <Nav />
-      <main className="mx-3">
+      <main>
         <Outlet />
       </main>
       <Footer />

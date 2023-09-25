@@ -6,23 +6,23 @@ function Footer() {
   const currentPage = useLocation().pathname;
 
   return (
-    <div className='mx-4 mb-5 p-4 border-bottom  d-flex justify-content-between'>
-      <div className=' d-flex align-items-center'>
-        <a className=' pe-2 font-serif text-decoration-none'>
+    <div className='mx-3 mb-3 p-4 border-bottom row'>
+      <div className='nav col-12 col-md-6 header-start'>
+        <a className=' font-serif text-decoration-none'>
         <Link
             to="/"
             // This is a conditional (ternary) operator that checks to see if the current page is "Home"
             // If it is, we set the current page to 'nav-link-active', otherwise we set it to 'nav-link'
-            className={currentPage === '/' ? 'nav-link active' : 'nav-link'}
+            className={currentPage === '/' ? 'nav-link active text-dark' : 'nav-link text-dark'}
           >
             matthew alfaro
           </Link>
         </a>
-        <span className='mb-1 pe-2 fw-light fs-5 font-san-serif text-uppercase '>
+        <span className=' fw-light fs-5 font-san-serif text-uppercase '>
           Front-End Developer | Graphic Designer
         </span>
       </div>
-      <div className=" nav ">
+      <div className=" nav col-12 col-md-6 header-end">
         <a className="  nav-item font-serif text-decoration-none">
           <Link
             to="/About"

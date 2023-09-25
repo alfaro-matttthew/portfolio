@@ -1,6 +1,15 @@
-
+import { useState } from "react";
+import Resume from "../components/Resume";
+import AboutMe from "../components/AboutMe";
+import { activeButton, inactiveButton } from "../../utils/commonClasslist";
 
 export default function About() {
+
+  const [activeComponent, setActiveComponent] = useState("A");
+
+  const toggleComponent = () => {
+    setActiveComponent(activeComponent === "A" ? "B" : "A");
+  };
 
   const bgImageStyle = {
     backgroundImage: "url(/images/matthew-alfaro.jpeg)",
@@ -8,36 +17,27 @@ export default function About() {
   };
 
   return (
-    <div className="d-flex mx-5 min-vh-100">
-      <div className=" w-25 mx-5 d-flex justify-content-end">
+    <div className="row mx-3 min-vh-100">
+      <div className="col-12 col-lg-3 ">
         <div 
         className="w-100 bg-img image about-img"
         style={bgImageStyle}
         >
         </div>
       </div>
-      <div className=" w-50 ">
-        <div className="w-75 d-flex flex-column">
-          <span className=" font-serif">
-            hello there
-          </span>
-          <h2 className="font-san-serif text-uppercase">
-            My Name is Matthew
-          </h2>
-          <div className="ps-3 body-font border-start border-3 border-secondary fw-light fs-6">
-            <p className="font-bold">
-              I am a web and graphic designer with a winning personailty. I specialize in visual identities & branding as well as web & print layout design. My personal style focuses on hand drawn type and illustrations, and creating designs with unique character, but my skill set has a wide range to create for a broad array of stylings. 
-            </p>
-            <p>
-            I have developed a mentality of design centered around a curiosity to learn new techniques and the aspiration to evolve as a designer. As someone to work alongside, I’ve always been considered a “people person” and I take joy working with others, whether that is in person or over email. So no matter who I am working with, or what I am working on, my desire is to contribute something awe-inspiring to this world and to have fun with others while doing it. 
-            </p>
-            <p>
-            Outside of designing, you can find me riding my bicycle, spending money on a new board game, or playing whatever new instrument I acquired that month to experiment with. The most recent instrument I bought was a melodica which is basically a tiny, mouth piano. So if you are not interested in my design skills but are still interested in hearing whatever song I’ve learned on melodica, hit me up. 
-            </p>
-          </div>
-        </div>
+      <div className="d-sm-none">
+        <button
+          onClick={toggleComponent}
+          className={activeComponent === "A" ? inactiveButton : activeButton }
+        >
+          {activeComponent === "A" ? "View Resume" : "Close Resume"}
+        </button>
       </div>
-      <div className="w-25">
+      <div className="col-12 col-md-7 col-lg-6 mt-3">
+            {activeComponent === "A" && <AboutMe />}
+            {activeComponent === "B" && <Resume />}
+      </div>
+      <div className="col-12 col-md-5 col-lg-3 mt-3">
           <div className="container d-flex flex-column align-items-center">
             <div className="col-12">
                 <h3 className='mb-4 py-1 px-4 black-bg body-font-w text-uppercase'>My Skill Sets</h3>
@@ -88,9 +88,15 @@ export default function About() {
               <li className="list-unstyled lh-sm">MongoDB</li>
             </div>
 
-          <div>
-
+            <div className="d-none d-sm-block">
+              <button
+                onClick={toggleComponent}
+                className={activeComponent === "A" ? inactiveButton : activeButton }
+              >
+                {activeComponent === "A" ? "View Resume" : "Close Resume"}
+              </button>
             </div>
+
           </div>
       </div>
     </div>

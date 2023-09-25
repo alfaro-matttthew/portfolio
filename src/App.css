@@ -98,5 +98,89 @@ body {
     
 }
 
+.footer-start,
+.footer-end {
+    text-align: center;
+}
+
+.header-start,
+.header-end {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.home-start {
+    background-image: url(./images/matthew-01.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.home-end {
+    background-image: none
+}
+
+.stroke {
+    color: #28231D;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #28231D;
+	text-shadow: 3px 3px 1px #FAF5EF;
+    font-size: 4.5rem;
+}
+
+.home-back {
+    background-color: #FAF5EF;
+    padding: 2px;
+}
+
+.home-center {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+  
+  @media (min-width: 769px) {
+    .footer-start {
+      text-align: left;
+    }
+
+    .footer-end {
+        text-align: right;
+    }
+
+    .header-start {
+        justify-content: flex-start;
+    }
+
+    .header-end {
+        justify-content: flex-end;
+    }
+
+    .home-start {
+        padding: 50px;
+    }
+
+    .stroke {
+        font-size: 6rem;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .home-start {
+        background-image: none
+    }
+
+    .home-end {
+        background-image: url(./images/matthew-01.png);
+        background-size: cover
+    }
+
+    .home-center {
+        justify-content: flex-start;
+    }
+  }
+
 
 

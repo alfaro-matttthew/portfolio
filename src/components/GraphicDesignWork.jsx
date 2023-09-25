@@ -51,7 +51,7 @@ export default function WebDesignWork() {
   return (
     <div className='row'>
       {projects.map((project, index) => (
-        <div className='col-4'>
+        <div className='col-12 col-md-6 col-lg-4'>
             <ProjectCard key={index} {...project} />
         </div>
       ))}

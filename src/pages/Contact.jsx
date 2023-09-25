@@ -81,31 +81,27 @@ export default function Contact() {
   };
 
   return (
-    <div>
-      <div className=' w-50 mb-4 d-flex justify-content-center'>
+    <div className='mx-3'>
+      <div className='col-12 col-md-6 col-lg-6 mb-4 d-flex justify-content-center'>
         <div>
           <span className=' font-serif fs-5'>what are you waiting for?</span>
           <h2 className=' font-san-serif title lh-1 text-uppercase'>Let's Get<br/>Started</h2>
         </div>
       </div>
-      <div className='row'>
-        <div className="min-vh-100 w-50 container">
+      <div className=' row'>
+        <div className=" min-vh-100 col-12 col-md-8 col-lg-6 container">
 
-          {isFormSubmitted ? (
+          <ContactForm />
+
+          {/* {isFormSubmitted ? (
             <FormSuccess name={formData.firstName} onReset={handleReset} />
           ) : (
             <ContactForm onFormSubmit={handleFormSubmit} />
-          )}
+          )} */}
 
         </div>
-        <div className='w-25 d-flex flex-column align-items-start'>
+        <div className='col-12 col-md-4 col-lg-3 d-flex flex-column align-items-start'>
           <h3 className='mb-4 py-1 px-4 black-bg body-font-w text-uppercase'>find me here too</h3>
-          <ul>
-            <li className='mb-2 list-unstyled d-flex align-items-center'>
-              <img className='me-1' src='/svg/icons8-gmail-logo.svg'></img>
-              <a className=' text-decoration-none body-font'>matthewealfaro@gmail.com</a>
-            </li>
-          </ul>
           <ul>
             <li className='mb-2 list-unstyled d-flex align-items-center'>
               <img className='me-1' src='/svg/icons8-github-25.svg'></img>

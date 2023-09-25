@@ -61,7 +61,7 @@ export default function Work() {
 
   return (
     <div className="min-vh-100 d-flex flex-column align-items-center">
-      <div className=" w-50 m-5 p-2 d-flex justify-content-around">
+      <div className=" w-50 m-5 p-2 d-flex justify-content-around" style={{gap: "5%"}}>
           <button 
             onClick={() => handleComponentClick("A")}
             className={
