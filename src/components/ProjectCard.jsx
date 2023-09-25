@@ -36,7 +36,7 @@ export default function ProjectCard({ title, technologies, imageSrc, liveLink, r
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <div className="h-100 w-100 black-transparent d-flex justify-content-center align-items-center" style={overlayStyle}>
+          <div className="h-100 w-100 black-transparent d-none d-md-flex justify-content-center align-items-center " style={overlayStyle}>
             {
               designStatus === 'web' ? 
               <div>
@@ -68,6 +68,27 @@ export default function ProjectCard({ title, technologies, imageSrc, liveLink, r
                 {tech}
               </span>
             ))}
+          </div>
+          <div className='mt-3'>
+           
+              {
+                designStatus === 'web' ? 
+                <div>
+                  <a href={liveLink} target="_blank" className="me-2 pt-1 px-3 rounded-pill fs-6 border border-dark text-dark font-serif-w text-decoration-none">
+                    live site
+                  </a>
+                  <a href={repoLink} target="_blank" className="me-2 pt-1 px-3 rounded-pill fs-6 border text-dark border-dark font-serif-w text-decoration-none">
+                    github repo
+                  </a>
+                </div>
+                : 
+                <div>
+                  <a href={caseStudyLink} target="_blank" className="me-2 pt-1 px-3 rounded-pill fs-6 border border-dark text-dark font-serif-w text-decoration-none">
+                    case study
+                  </a>
+                </div> 
+              }
+ 
           </div>
         </div>
       </div>
