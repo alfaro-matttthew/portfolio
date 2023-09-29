@@ -10,7 +10,7 @@ export default function WebDesignWork() {
       title: 'Lawn Shark',
       technologies: ['MongoDB', 'Express', 'React', 'Node'],
       imageSrc: '/images/lawn-shark-color.png',
-      liveLink: 'https://gentle-wildwood-36558-193385005281.herokuapp.com/',
+      liveLink: 'https://lawnshark.app/Welcome/',
       repoLink: 'https://github.com/Jlausier/LawnShark',
       design: 'web',
     },
