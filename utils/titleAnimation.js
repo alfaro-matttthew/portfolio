@@ -32,12 +32,16 @@ function deleteSkillName() {
     let i = word.length - 1;
     let id = setInterval(() => {
         if (i >= 0) {
-            text.innerHTML = 
+            text.innerHTML = text.innerHTML.substring(0, text.innerHTML.length - 1);
+            i--;
+        } else {
+            writeSkillNames(skillNames[gen.next().value]);
+            clearInterval(id);
         }
     }, 100)
 };
 
 let gen = generator();
 
-writeSkillNames(skillNames[gen]);
+writeSkillNames(skillNames[gen.next().value]);
 
