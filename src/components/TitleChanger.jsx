@@ -1,15 +1,14 @@
 import React, { useEffect } from "react";
 
 export default function TitleChanger() {
-    const skillNames = ['Graphic Designer', 'Front-End Developer'];
-    // const text = document.querySelector('.text');
+    const skillNames = ['Graphic Designer', 'Front-End Developer', 'Graphic Designer', 'Front-End Developer', '& Kind Friend', 'Graphic Designer', 'Front-End Developer', 'Graphic Designer', 'Front-End Developer', 'Musician & Singer Songwriter', 'Graphic Designer', 'Front-End Developer', 'Husband & Stepdog Owner', 'Graphic Designer', 'Front-End Developer', "(I can't think of anything else)", 'Graphic Designer', 'Front-End Developer', 'Graphic Designer', 'Front-End Developer', "(I'm serious)", "(Like, no joke)", "(There is nothing left)", "(Officially starting over)", 'Graphic Designer', 'Front-End Developer', 'Graphic Designer', 'Front-End Developer', '& Kind Friend', ";-) you won!"];
 
     const generator = function* () {
         var i = 0;
         while (true) {
             yield i++;
     
-            if (i > 1) {
+            if (i > 29) {
                 i = 0;
             }
         }
@@ -37,7 +36,7 @@ export default function TitleChanger() {
 
     const deleteSkillName = () => {
         let skill = textRef.current.innerHTML;
-        let i = skill.length - 1;  // Fix: use skill.length instead of word.length
+        let i = skill.length - 1;  
     
         let id = setInterval(() => {
             if (i >= 0) {
