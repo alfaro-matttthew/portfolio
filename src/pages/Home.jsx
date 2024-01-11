@@ -12,7 +12,7 @@ export default function Home() {
         <div className=" w-100 px-3 d-flex flex-column align-items-start justify-content-center" style={ color }>
           <span className="home-back font-serif fs-3 lh-1">creative</span>
           <h1 className="stroke font-san-serif title lh-1 text-uppercase">
-            Front-End Developer
+            Graphic Designer & Front-End Developer
           </h1>
           <span className="home-back font-serif fs-3 lh-1">based in tampa, florida</span>
           <ButtonPillNav title={"Let's Chat"} path={'/Contact'} style={{color: '#28231D'}}/>
