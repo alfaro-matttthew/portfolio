@@ -10,7 +10,7 @@ export default function WebDesignWork() {
       title: 'Lawn Shark',
       technologies: ['MongoDB', 'Express', 'React', 'Node'],
       imageSrc: '/images/lawn-shark-color.png',
-      liveLink: 'https://lawnshark.app/Welcome/',
+      liveLink: 'https://www.behance.net/gallery/188426167/LawnShark-React-Web-Application',
       repoLink: 'https://github.com/Jlausier/LawnShark',
       design: 'web',
     },
