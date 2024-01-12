@@ -1,3 +1,8 @@
+body {
+    width: auto;
+    overflow-x: hidden;
+}
+
 .site-bg {
     background-color: #FAF5EF;
 }
