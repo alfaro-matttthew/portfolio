@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 
 export default function TitleChanger() {
-    const skillNames = ['Graphic Designer', 'Front-End Developer', 'Graphic Designer', 'Front-End Developer', '& Kind Friend', 'Graphic Designer', 'Front-End Developer', 'Graphic Designer', 'Front-End Developer', 'Musician & Singer Songwriter', 'Graphic Designer', 'Front-End Developer', 'Husband & Stepdog Owner', 'Graphic Designer', 'Front-End Developer', "(I can't think of anything else)", 'Graphic Designer', 'Front-End Developer', 'Graphic Designer', 'Front-End Developer', "(I'm serious)", "(Like, no joke)", "(There is nothing left)", "(Officially starting over)", 'Graphic Designer', 'Front-End Developer', 'Graphic Designer', 'Front-End Developer', '& Kind Friend', ";-) you won!"];
+    const skillNames = ['Graphic Designer', 'Front-End Developer', 'Graphic Designer', 'Front-End Developer', '& Kind Friend', 'Graphic Designer', 'Front-End Developer', 'Graphic Designer', 'Front-End Developer', '(Musician and Singer Songwriter)', 'Graphic Designer', 'Front-End Developer', 'Husband and Stepdog Owner', 'Graphic Designer', 'Front-End Developer', "(I can't think of anything else)", 'Graphic Designer', 'Front-End Developer', 'Graphic Designer', 'Front-End Developer', "(I'm serious)", "(Like, no joke)", "(There is nothing left)", "(Officially starting over)", 'Graphic Designer', 'Front-End Developer', 'Graphic Designer', 'Front-End Developer', '& Kind Friend', ";-) you won!"];
 
     const generator = function* () {
         var i = 0;
