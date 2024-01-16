@@ -35,6 +35,73 @@ body {
     color: #b7a38b;
 }
 
+.nav-hover {
+    /* border: 1px solid red; */
+    position: relative;
+    padding: 4px 12px;
+    transition: all .2s ease;
+    margin: 0px 10px 0px 10px;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        border-radius: 20px;
+        background-color: rgb(40, 35, 29, .0);
+        width: 40px;
+        height: 40px;
+        transition: all .3s ease;
+        pointer-events: auto;
+    };
+    span {
+        position: relative;
+        color: inherit;
+        transition: all .3s ease;
+        font-size: 16px;
+    }
+    svg {
+        position: relative;
+        top: 0;
+        margin-left: 10px;
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke: #28231D;
+        stroke-width: 0;
+        transform: translate(-5px, -2px);
+        transition: all .3s ease;
+    };
+    &:hover {
+        &::before {
+            width: 100%;
+            background-color: rgb(40, 35, 29);
+            pointer-events: auto;
+        };
+        svg {
+            transform: translate(5px, -2px);
+            stroke:#FAF5EF;
+            stroke-width: 2;
+        };
+        span {
+            color: #FAF5EF;
+        };
+    };
+    &:active {
+        transform: scale(.96);
+    }
+}
+
+.social-btn {
+    transition: all .3s ease;
+    &:hover {
+        transform: translateX(5px);
+    };
+    &:active {
+        transform: scale(.96);
+    }
+}
+
 .font-serif, 
 .font-serif-w {
     font-family: 'Ramaraja', serif;
@@ -106,6 +173,10 @@ body {
 .footer-start,
 .footer-end {
     text-align: center;
+}
+
+.footer-end > a:hover {
+        height: 20px;
 }
 
 .header-start,

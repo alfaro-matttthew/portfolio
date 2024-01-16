@@ -103,7 +103,7 @@ export default function Contact() {
         <div className='col-12 col-md-4 col-lg-3 d-flex flex-column align-items-start'>
           <h3 className='mb-4 py-1 px-4 black-bg body-font-w text-uppercase'>find me here too</h3>
           <ul>
-            <li className='mb-2 list-unstyled d-flex align-items-center'>
+            <li className='social-btn mb-2 list-unstyled d-flex align-items-center'>
               <img className='me-1' src='/svg/icons8-github-25.svg'></img>
               <a 
                 className=' text-decoration-none body-font'
@@ -113,7 +113,7 @@ export default function Contact() {
                 GitHub
               </a>
             </li>
-            <li className='mb-2 list-unstyled d-flex align-items-center'>
+            <li className='social-btn mb-2 list-unstyled d-flex align-items-center'>
               <img className='me-1' src='/svg/icons8-linkedin-25.svg'></img>
               <a 
                 className=' text-decoration-none body-font'
@@ -123,9 +123,7 @@ export default function Contact() {
                 LinkedIn
               </a>
             </li>
-          </ul>
-          <ul>
-            <li className='mb-2 list-unstyled d-flex align-items-center'>
+            <li className='social-btn mb-2 list-unstyled d-flex align-items-center'>
               <img className='me-1' src='/svg/icons8-behance-25.svg'></img>
               <a 
                 className=' text-decoration-none body-font'
@@ -135,7 +133,7 @@ export default function Contact() {
                 Behance
               </a>
             </li>
-            <li className='mb-2 list-unstyled d-flex align-items-center'>
+            <li className='social-btn mb-2 list-unstyled d-flex align-items-center'>
               <img className='me-1' src='/svg/icons8-dribbble-25.svg'></img>
               <a 
                 className=' text-decoration-none body-font'

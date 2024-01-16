@@ -14,7 +14,7 @@ export default function Home() {
           <span className="home-back font-serif fs-3 lh-1">creative</span>
             <TitleChanger />
           <span className="home-back font-serif fs-3 lh-1">based in tampa, florida</span>
-          <ButtonPillNav title={"Let's Chat"} path={'/Contact'} style={{color: '#28231D'}}/>
+          {/* <ButtonPillNav title={"Let's Chat"} path={'/Contact'} style={{color: '#28231D'}}/> */}
         </div>
       </div>
       <div 
