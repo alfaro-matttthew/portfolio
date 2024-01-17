@@ -39,7 +39,7 @@ body {
     /* border: 1px solid red; */
     position: relative;
     padding: 4px 12px;
-    transition: all .2s ease;
+    transition: all .3s ease;
     margin: 0px 10px 0px 10px;
     &::before {
         content: "";
@@ -67,19 +67,19 @@ body {
         fill: none;
         stroke-linecap: round;
         stroke-linejoin: round;
-        stroke: #28231D;
+        stroke: #FAF5EF;
         stroke-width: 0;
-        transform: translate(-5px, -2px);
+        transform: translate(0px, -2px);
         transition: all .3s ease;
     };
     &:hover {
+        transform: translateX(5px);
         &::before {
             width: 100%;
             background-color: rgb(40, 35, 29);
-            pointer-events: auto;
         };
         svg {
-            transform: translate(5px, -2px);
+            transform: translate(2px, -2px);
             stroke:#FAF5EF;
             stroke-width: 2;
         };
@@ -96,6 +96,16 @@ body {
     transition: all .3s ease;
     &:hover {
         transform: translateX(5px);
+    };
+    &:active {
+        transform: scale(.96);
+    }
+}
+
+.pill-btn {
+    transition: all .3s ease;
+    &:hover {
+        transform: translate(0px, 5px);
     };
     &:active {
         transform: scale(.96);
@@ -166,10 +176,6 @@ body {
     padding: 0px;
 }
 
-.transition {
-    
-}
-
 .footer-start,
 .footer-end {
     text-align: center;
@@ -179,10 +185,14 @@ body {
         height: 20px;
 }
 
+.nav-header {
+}
+
 .header-start,
 .header-end {
     display: flex;
     justify-content: center;
+    align-items: center;
     text-align: center;
 }
 

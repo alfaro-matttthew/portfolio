@@ -38,7 +38,7 @@ export default function About() {
             {activeComponent === "B" && <Resume />}
       </div>
       <div className="col-12 col-md-5 col-lg-3 mt-3">
-          <div className="container d-flex flex-column align-items-center">
+          <div className="container pb-3 d-flex flex-column align-items-center">
             <div className="col-12">
                 <h3 className='mb-4 py-1 px-4 black-bg body-font-w text-uppercase'>My Skill Sets</h3>
             </div>
