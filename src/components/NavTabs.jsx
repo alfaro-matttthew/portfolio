@@ -8,7 +8,7 @@ function Footer() {
   return (
     <div className='mx-3 mb-3 p-4 border-bottom row'>
       <div className=' nav col-12 col-md-6 header-start'>
-        <a className='nav-hover  font-serif text-decoration-none'>
+        <a className='nav-hover font-serif text-decoration-none'>
         <Link
             to="/"
             // This is a conditional (ternary) operator that checks to see if the current page is "Home"
