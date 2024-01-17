@@ -1,7 +1,3 @@
-.aaa {
-    stroke: #FAF5EF;
-}
-
 body {
     width: auto;
     overflow-x: hidden;
@@ -93,6 +89,100 @@ body {
     };
     &:active {
         transform: scale(.96);
+    }
+}
+
+.ham-nav {
+    position: absolute;
+    z-index: 100;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+    transform: translate(100%,-100%) scale(0.5);   
+    border-radius:100%; 
+}
+
+.hn-active .ham-nav {
+    opacity: 1;
+    background-color: #28231D;
+    transform: translateY(0) scale(1); 
+    border-radius:0; 
+    width:100%;
+    height:100%;
+}
+
+.hn-list {
+    margin: 0;
+    padding: 10px;
+}
+
+.hn-item {
+    list-style-type: none;
+    text-align: left;
+}
+
+.hn-link {
+    text-decoration: none;
+    color: #FAF5EF;
+    /* opacity: 1; */
+    opacity:0;
+    /* transition-delay:500ms; */
+    transition: opacity .5s ease-in-out;
+}
+
+.hn-active .hn-link {
+    opacity: 1;
+}
+
+.hn-trigger {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 25px;
+    right: 10px;
+    top: 10px;
+    z-index: 100;
+}
+
+.hn-active .hn-trigger {
+    opacity: .5;
+}
+
+.hn-icon {
+    display: inline-block;
+    position: relative;
+    width: 30px;
+    height: 5px;
+    background-color: #28231D;
+    transition-property: background-color, transform;
+    transition-duration: .3s;
+    &::before,
+    &::after {
+        content: '';
+        display: block;
+        width: 30px;
+        height: 5px;
+        position: absolute;
+        background-color: #28231D;
+        transition-property: background-color, transform;
+        transition-duration: .3s;
+    }
+    &::before {
+        margin-top: -10px;
+    }
+    &::after {
+        margin-top: 10px;
+    }
+}
+
+.hn-active .hn-icon {
+    background-color: rgba(0,0,0,0.0);
+    &::before {
+        margin-top: 0;
+        transform: rotate(45deg);
+    }
+    &::after {
+        margin-top: 0;
+        transform: rotate(-45deg);
     }
 }
 
@@ -247,6 +337,8 @@ body {
 
   
   @media (min-width: 769px) {
+
+
     .footer-start {
       text-align: left;
     }
