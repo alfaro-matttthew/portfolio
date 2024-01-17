@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function ProjectCardLg({ title, technologies, imageSrc, liveLink, repoLink, caseStudyLink, design }) {
+export default function ProjectCardLg({ title, technologies, imageSrc, summary, liveLink, repoLink, caseStudyLink, design }) {
 
     const [isHovered, setIsHovered] = useState(false);
 

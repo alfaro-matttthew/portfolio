@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function ProjectCard({ title, technologies, imageSrc, liveLink, repoLink, caseStudyLink, design }) {
+export default function ProjectCard({ title, technologies, imageSrc, summary, liveLink, repoLink, caseStudyLink, design }) {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -40,7 +40,14 @@ export default function ProjectCard({ title, technologies, imageSrc, liveLink, r
           <div className="h-100 w-100 black-transparent d-none d-lg-flex justify-content-center align-items-center " style={overlayStyle}>
             {
               designStatus === 'web' ? 
-              <div>
+              <div className='w-75'>
+                <h2 className="card-title text-decoration-none mt-2 work-title font-san-serif-w fs-1 lh-1 text-uppercase">
+                  {title}
+                </h2>
+                <hr className="font-san-serif-w" />
+                <p className='body-font-w'>
+                  {summary}
+                </p>
                 <a href={liveLink} target="_blank" className="px-2 fs-5 font-serif-w text-decoration-none">
                   live site
                 </a>
@@ -49,7 +56,14 @@ export default function ProjectCard({ title, technologies, imageSrc, liveLink, r
                 </a>
               </div>
               : 
-              <div>
+              <div className='w-75'>
+                <h2 className="card-title text-decoration-none mt-2 work-title font-san-serif-w fs-1 lh-1 text-uppercase">
+                  {title}
+                </h2>
+                <hr className="font-san-serif-w" />
+                <p className='body-font-w'>
+                  {summary}
+                </p>
                 <a href={caseStudyLink} target="_blank" className="px-2 fs-5 font-serif-w text-decoration-none">
                   case study
                 </a>
