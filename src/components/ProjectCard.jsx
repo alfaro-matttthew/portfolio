@@ -23,7 +23,7 @@ export default function ProjectCard({ title, technologies, imageSrc, liveLink, r
   console.log(designStatus);
 
   return (
-    <div className="card pb-5 border-0 site-bg mx-2">
+    <div className="card border-0 site-bg">
       <div className="card-img-top bg-img gx-0 row" style={{ height: '400px' }}>
         <div
           className="col-12"
@@ -59,7 +59,7 @@ export default function ProjectCard({ title, technologies, imageSrc, liveLink, r
       </div>
       <div className="card-body bg-none">
         <div className=" col-12">
-          <a className="card-title text-decoration-none mt-2 work-title font-san-serif fs-1 lh-1 text-uppercase">
+          {/* <a className="card-title text-decoration-none mt-2 work-title font-san-serif fs-1 lh-1 text-uppercase">
             {title}
           </a>
           <div className="card-text body-font lh-sm">
@@ -68,8 +68,8 @@ export default function ProjectCard({ title, technologies, imageSrc, liveLink, r
                 {tech}
               </span>
             ))}
-          </div>
-          <div className='mt-3 d-lg-none'>
+          </div> */}
+          <div className=' d-lg-none'>
            
               {
                 designStatus === 'web' ? 

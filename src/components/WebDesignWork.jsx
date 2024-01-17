@@ -62,7 +62,7 @@ export default function WebDesignWork() {
                 <ProjectCardLg key={index} {...project} />
               </div>
             ) : (
-              <div className='col-12 col-md-6 col-lg-4'>
+              <div className='col-12 col-md-6'>
                 <ProjectCard key={index} {...project} />
                 </div>
             )
