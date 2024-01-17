@@ -1,6 +1,6 @@
 // Bringing in the required import from 'react-router-dom'
 import { Outlet } from 'react-router-dom';
-import Nav from './components/NavTabs';
+import Nav from './components/navigation/NavTabs';
 import Footer from './components/Footer';
 
 import "./App.css";
