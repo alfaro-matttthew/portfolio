@@ -19,7 +19,7 @@ export default function OverlayContent({ title, technologies, imageSrc, summary,
             { design === 'web' ?
                 <div>
                     <div className="social-btn">
-                        <a href={liveLink} target="_blank" className="social-btn px-2 fs-5 font-serif-w text-decoration-none">
+                        <a href={liveLink} target="_blank" className=" px-2 fs-5 font-serif-w text-decoration-none">
                             live site
                         </a>
                         <svg width="13px" height="10px" viewBox="0 0 13 10">
@@ -28,7 +28,7 @@ export default function OverlayContent({ title, technologies, imageSrc, summary,
                         </svg>
                     </div>
                     <div className="social-btn">
-                        <a href={repoLink} target="_blank" className="social-btn px-2 fs-5 font-serif-w text-decoration-none">
+                        <a href={repoLink} target="_blank" className=" px-2 fs-5 font-serif-w text-decoration-none">
                             github repo
                         </a>
                         <svg width="13px" height="10px" viewBox="0 0 13 10">

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import OverlayContent from './OverlayContent';
+import MobileContent from './MobileContent';
 
 export default function ProjectCardLg({ title, technologies, imageSrc, summary, liveLink, repoLink, caseStudyLink, design }) {
 
@@ -55,49 +56,7 @@ export default function ProjectCardLg({ title, technologies, imageSrc, summary, 
         </div>
       </div>
       <div className="card-body bg-none">
-        <div className=" col-12">
-          {/* <a className="card-title text-decoration-none mt-2 work-title font-san-serif fs-1 lh-1 text-uppercase">
-            {title}
-          </a>
-          <div className="card-text body-font lh-sm">
-            {technologies.map((tech, index) => (
-              <span key={index} className="pe-2">
-                {tech}
-              </span>
-            ))}
-          </div> */}
-          <div className='mt-3 d-lg-none'>
-           
-              {
-                designStatus === 'web' ? 
-                <div>
-                  <a className="card-title text-decoration-none mt-2 work-title font-san-serif fs-1 lh-1 text-uppercase">
-                    {title}
-                  </a>
-                  <div className="card-text body-font lh-sm">
-                    {technologies.map((tech, index) => (
-                      <span key={index} className="pe-2">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                  <a href={liveLink} target="_blank" className="me-2 pt-1 px-3 rounded-pill fs-6 border border-dark text-dark font-serif-w text-decoration-none">
-                    live site
-                  </a>
-                  <a href={repoLink} target="_blank" className="me-2 pt-1 px-3 rounded-pill fs-6 border text-dark border-dark font-serif-w text-decoration-none">
-                    github repo
-                  </a>
-                </div>
-                : 
-                <div>
-                  <a href={caseStudyLink} target="_blank" className="me-2 pt-1 px-3 rounded-pill fs-6 border border-dark text-dark font-serif-w text-decoration-none">
-                    case study
-                  </a>
-                </div> 
-              }
- 
-          </div>
-        </div>
+        <MobileContent {...projectInfo}/>
       </div>
       </div>
     );
