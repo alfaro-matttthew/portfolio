@@ -106,6 +106,19 @@ body {
     }
 }
 
+.social-btn > svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #FAF5EF;
+    stroke-width: 2;
+    transform: translate(0px, -2px);
+    transition: all .3s ease;
+}
+
 .pill-btn {
     transition: all .3s ease;
     &:hover {
@@ -256,6 +269,10 @@ body {
 
     .stroke {
         font-size: 6rem;
+    }
+
+    .aspect-ratio-style {
+        aspect-ratio: 1/1;
     }
   }
 

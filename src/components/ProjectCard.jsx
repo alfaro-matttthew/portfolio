@@ -1,6 +1,19 @@
 import React, { useState } from 'react';
+import OverlayContent from './OverlayContent';
 
 export default function ProjectCard({ title, technologies, imageSrc, summary, liveLink, repoLink, caseStudyLink, design }) {
+
+  const projectInfo = {
+    title: title,
+    technologies: technologies,
+    imageSrc: imageSrc,
+    summary: summary,
+    liveLink: liveLink,
+    repoLink: repoLink,
+    caseStudyLink: caseStudyLink,
+    design: design,
+  }
+
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -23,69 +36,37 @@ export default function ProjectCard({ title, technologies, imageSrc, summary, li
   console.log(designStatus);
 
   return (
-    <div className="card border-0 site-bg mb-4 display-card-style">
-      <div className="card-img-top bg-img gx-0 row" style={{ height: '400px' }}>
+    <div className="card site-bg mb-4 display-card-style">
+      <div className=" card-img-top bg-img gx-0 mb-4 mb-md-1 mb-lg-0 row" style={{ height: '400px' }}>
         <div
-          className="col-12"
+          className="col-12 aspect-ratio-style"
           style={{
             backgroundImage: `url(${imageSrc})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             position: 'relative',
-            aspectRatio: '1 / 1',
           }}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <div className="h-100 w-100 black-transparent d-none d-lg-flex justify-content-center align-items-center " style={overlayStyle}>
-            {
-              designStatus === 'web' ? 
-              <div className='w-75'>
-                <h2 className="card-title text-decoration-none mt-2 work-title font-san-serif-w fs-1 lh-1 text-uppercase">
-                  {title}
-                </h2>
-                <hr className="font-san-serif-w" />
-                <p className='body-font-w'>
-                  {summary}
-                </p>
-                <a href={liveLink} target="_blank" className="px-2 fs-5 font-serif-w text-decoration-none">
-                  live site
-                </a>
-                <a href={repoLink} target="_blank" className="px-2 fs-5 border-start font-serif-w text-decoration-none">
-                  github repo
-                </a>
-              </div>
-              : 
-              <div className='w-75'>
-                <h2 className="card-title text-decoration-none mt-2 work-title font-san-serif-w fs-1 lh-1 text-uppercase">
-                  {title}
-                </h2>
-                <hr className="font-san-serif-w" />
-                <p className='body-font-w'>
-                  {summary}
-                </p>
-                <a href={caseStudyLink} target="_blank" className="px-2 fs-5 font-serif-w text-decoration-none">
-                  case study
-                </a>
-              </div> 
-            }
+          <div className=" h-100 w-100 black-transparent d-none d-lg-flex justify-content-center align-items-center " style={overlayStyle}>
+              <OverlayContent {...projectInfo}/>
           </div>
         </div>
       </div>
-      <div className="card-body bg-none">
+      <div className=" bg-none">
         <div className=" col-12">
-          {/* <a className="card-title text-decoration-none mt-2 work-title font-san-serif fs-1 lh-1 text-uppercase">
-            {title}
-          </a>
-          <div className="card-text body-font lh-sm">
-            {technologies.map((tech, index) => (
-              <span key={index} className="pe-2">
-                {tech}
-              </span>
-            ))}
-          </div> */}
-          {/* <div className=' d-lg-none'>
-           
+          <div className=' mt-3 d-lg-none'>
+                  <div className=" card-title text-decoration-none work-title font-san-serif fs-1 lh-1 text-uppercase">
+                    {title}
+                  </div>
+                  <div className="card-text body-font pb-2 lh-sm">
+                    {technologies.map((tech, index) => (
+                      <span key={index} className="pe-2">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
               {
                 designStatus === 'web' ? 
                 <div>
@@ -104,7 +85,7 @@ export default function ProjectCard({ title, technologies, imageSrc, summary, li
                 </div> 
               }
  
-          </div> */}
+          </div>
         </div>
       </div>
     </div>

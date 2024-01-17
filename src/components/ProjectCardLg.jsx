@@ -40,17 +40,45 @@ export default function ProjectCardLg({ title, technologies, imageSrc, summary, 
           <div className="h-100 w-100 black-transparent d-none d-lg-flex justify-content-center align-items-center " style={overlayStyle}>
             {
               designStatus === 'web' ? 
-              <div>
-                <a href={liveLink} target="_blank" className="px-2 fs-5 font-serif-w text-decoration-none">
+              <div className='w-75'>
+                <h2 className="card-title text-decoration-none mt-2 work-title font-san-serif-w fs-1 lh-1 text-uppercase">
+                  {title}
+                </h2>
+                <div className="card-text body-font-w lh-sm">
+                    {technologies.map((tech, index) => (
+                      <span key={index} className="pe-2">
+                        {tech}
+                      </span>
+                    ))}
+                </div>
+                <hr className="font-san-serif-w" />
+                <p className='body-font-w'>
+                  {summary}
+                </p>
+                <a href={liveLink} target="_blank" className="social-btn px-2 fs-5 font-serif-w text-decoration-none">
                   live site
                 </a>
-                <a href={repoLink} target="_blank" className="px-2 fs-5 border-start font-serif-w text-decoration-none">
+                <a href={repoLink} target="_blank" className="social-btn px-2 fs-5 border-start font-serif-w text-decoration-none">
                   github repo
                 </a>
               </div>
               : 
-              <div>
-                <a href={caseStudyLink} target="_blank" className="px-2 fs-5 font-serif-w text-decoration-none">
+              <div className='w-75'>
+                <h2 className="card-title text-decoration-none mt-2 work-title font-san-serif-w fs-1 lh-1 text-uppercase">
+                  {title}
+                </h2>
+                <div className="card-text body-font-w lh-sm">
+                    {technologies.map((tech, index) => (
+                      <span key={index} className="pe-2">
+                        {tech}
+                      </span>
+                    ))}
+                </div>
+                <hr className="font-san-serif-w" />
+                <p className='body-font-w'>
+                  {summary}
+                </p>
+                <a href={caseStudyLink} target="_blank" className="social-btn px-2 fs-5 font-serif-w text-decoration-none">
                   case study
                 </a>
               </div> 
@@ -70,11 +98,21 @@ export default function ProjectCardLg({ title, technologies, imageSrc, summary, 
               </span>
             ))}
           </div> */}
-          {/* <div className='mt-3 d-lg-none'>
+          <div className='mt-3 d-lg-none'>
            
               {
                 designStatus === 'web' ? 
                 <div>
+                  <a className="card-title text-decoration-none mt-2 work-title font-san-serif fs-1 lh-1 text-uppercase">
+                    {title}
+                  </a>
+                  <div className="card-text body-font lh-sm">
+                    {technologies.map((tech, index) => (
+                      <span key={index} className="pe-2">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                   <a href={liveLink} target="_blank" className="me-2 pt-1 px-3 rounded-pill fs-6 border border-dark text-dark font-serif-w text-decoration-none">
                     live site
                   </a>
@@ -90,7 +128,7 @@ export default function ProjectCardLg({ title, technologies, imageSrc, summary, 
                 </div> 
               }
  
-          </div> */}
+          </div>
         </div>
       </div>
       </div>
