@@ -38,10 +38,14 @@ export default function OverlayContent({ title, technologies, imageSrc, summary,
                     </div>
                 </div>
                 :
-                <div>
+                <div className="social-btn">
                     <a href={caseStudyLink} target="_blank" className="social-btn px-2 fs-5 font-serif-w text-decoration-none">
                         case study
                     </a>
+                    <svg width="13px" height="10px" viewBox="0 0 13 10">
+                        <path d="M1,5 L11,5"></path>
+                        <polyline points="8 1 12 5 8 9"></polyline>
+                    </svg>
                 </div>
             }
 

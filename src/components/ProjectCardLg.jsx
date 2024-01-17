@@ -1,6 +1,18 @@
 import React, { useState } from 'react';
+import OverlayContent from './OverlayContent';
 
 export default function ProjectCardLg({ title, technologies, imageSrc, summary, liveLink, repoLink, caseStudyLink, design }) {
+
+    const projectInfo = {
+      title: title,
+      technologies: technologies,
+      imageSrc: imageSrc,
+      summary: summary,
+      liveLink: liveLink,
+      repoLink: repoLink,
+      caseStudyLink: caseStudyLink,
+      design: design,
+    }
 
     const [isHovered, setIsHovered] = useState(false);
 
@@ -37,52 +49,8 @@ export default function ProjectCardLg({ title, technologies, imageSrc, summary, 
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <div className="h-100 w-100 black-transparent d-none d-lg-flex justify-content-center align-items-center " style={overlayStyle}>
-            {
-              designStatus === 'web' ? 
-              <div className='w-75'>
-                <h2 className="card-title text-decoration-none mt-2 work-title font-san-serif-w fs-1 lh-1 text-uppercase">
-                  {title}
-                </h2>
-                <div className="card-text body-font-w lh-sm">
-                    {technologies.map((tech, index) => (
-                      <span key={index} className="pe-2">
-                        {tech}
-                      </span>
-                    ))}
-                </div>
-                <hr className="font-san-serif-w" />
-                <p className='body-font-w'>
-                  {summary}
-                </p>
-                <a href={liveLink} target="_blank" className="social-btn px-2 fs-5 font-serif-w text-decoration-none">
-                  live site
-                </a>
-                <a href={repoLink} target="_blank" className="social-btn px-2 fs-5 border-start font-serif-w text-decoration-none">
-                  github repo
-                </a>
-              </div>
-              : 
-              <div className='w-75'>
-                <h2 className="card-title text-decoration-none mt-2 work-title font-san-serif-w fs-1 lh-1 text-uppercase">
-                  {title}
-                </h2>
-                <div className="card-text body-font-w lh-sm">
-                    {technologies.map((tech, index) => (
-                      <span key={index} className="pe-2">
-                        {tech}
-                      </span>
-                    ))}
-                </div>
-                <hr className="font-san-serif-w" />
-                <p className='body-font-w'>
-                  {summary}
-                </p>
-                <a href={caseStudyLink} target="_blank" className="social-btn px-2 fs-5 font-serif-w text-decoration-none">
-                  case study
-                </a>
-              </div> 
-            }
+          <div className=" h-100 w-100 black-transparent d-none d-lg-flex justify-content-center align-items-center " style={overlayStyle}>
+              <OverlayContent {...projectInfo}/>
           </div>
         </div>
       </div>
