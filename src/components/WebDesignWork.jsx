@@ -1,5 +1,6 @@
 import React from 'react';
 import ProjectCard from './ProjectCard';
+import ProjectCardLg from './ProjectCardLg';
 import ProjectHighlight from './ProjectHighlight';
 
 
@@ -13,6 +14,7 @@ export default function WebDesignWork() {
       liveLink: 'https://www.behance.net/gallery/188426167/LawnShark-React-Web-Application',
       repoLink: 'https://github.com/Jlausier/LawnShark',
       design: 'web',
+      featured: true,
     },
     {
       title: 'Wallet Wizard',
@@ -21,6 +23,7 @@ export default function WebDesignWork() {
       liveLink: 'https://still-spire-90353-025f487cfe63.herokuapp.com',
       repoLink: 'https://github.com/Jlausier/WalletWizzard',
       design: 'web',
+      featured: false,
     },
     {
       title: 'AFK',
@@ -29,6 +32,7 @@ export default function WebDesignWork() {
       liveLink: 'https://jlausier.github.io/AFK-Coop/',
       repoLink: 'https://github.com/Jlausier/AFK-Coop',
       design: 'web',
+      featured: false,
     },
     {
       title: 'CORE Fashion',
@@ -37,6 +41,7 @@ export default function WebDesignWork() {
       liveLink: 'https://alfaro-matttthew.github.io/core-fashion/',
       repoLink: 'https://github.com/alfaro-matttthew/core-fashion',
       design: 'web',
+      featured: false,
     },
     {
       title: 'Lobby Klink',
@@ -45,15 +50,22 @@ export default function WebDesignWork() {
       liveLink: 'https://alfaro-matttthew.github.io/lobby-klink/',
       repoLink: 'https://github.com/alfaro-matttthew/lobby-klink',
       design: 'web',
+      featured: false,
     },
   ];
 
   return (
     <div className='row'>
-      {projects.map((project, index) => (
-        <div className='col-12 col-md-6 col-lg-4'>
-            <ProjectCard key={index} {...project} />
-        </div>
+      {projects.map((project, index) => (       
+             projects[index].featured ? (
+              <div className='col-12'>
+                <ProjectCardLg key={index} {...project} />
+              </div>
+            ) : (
+              <div className='col-12 col-md-6 col-lg-4'>
+                <ProjectCard key={index} {...project} />
+                </div>
+            )
       ))}
     </div>
   );
