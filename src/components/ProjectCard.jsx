@@ -23,7 +23,7 @@ export default function ProjectCard({ title, technologies, imageSrc, liveLink, r
   console.log(designStatus);
 
   return (
-    <div className="card border-0 site-bg">
+    <div className="card border-0 site-bg mb-4 display-card-style">
       <div className="card-img-top bg-img gx-0 row" style={{ height: '400px' }}>
         <div
           className="col-12"
@@ -32,6 +32,7 @@ export default function ProjectCard({ title, technologies, imageSrc, liveLink, r
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             position: 'relative',
+            aspectRatio: '1 / 1',
           }}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
@@ -69,7 +70,7 @@ export default function ProjectCard({ title, technologies, imageSrc, liveLink, r
               </span>
             ))}
           </div> */}
-          <div className=' d-lg-none'>
+          {/* <div className=' d-lg-none'>
            
               {
                 designStatus === 'web' ? 
@@ -89,7 +90,7 @@ export default function ProjectCard({ title, technologies, imageSrc, liveLink, r
                 </div> 
               }
  
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

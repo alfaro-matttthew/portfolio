@@ -70,7 +70,7 @@ export default function ProjectCardLg({ title, technologies, imageSrc, liveLink,
               </span>
             ))}
           </div> */}
-          <div className='mt-3 d-lg-none'>
+          {/* <div className='mt-3 d-lg-none'>
            
               {
                 designStatus === 'web' ? 
@@ -90,7 +90,7 @@ export default function ProjectCardLg({ title, technologies, imageSrc, liveLink,
                 </div> 
               }
  
-          </div>
+          </div> */}
         </div>
       </div>
       </div>
