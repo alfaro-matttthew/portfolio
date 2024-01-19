@@ -294,18 +294,38 @@ body {
 
   /* ----------- test hamburger ---------- */
 
+.mobile-nav-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mobile-bar {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+}
+
+.b {
+    fill:none;
+    stroke:#000;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-width:66.67px;
+}
+
 .ham-nav {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
     position: fixed;
-    height: 100%;
+    height: auto;
     width: 100%;
     top: 0px;
     right: 0px;
     z-index: 100;
     padding: 16px 16px;
     transition: all .3s ease;
+    /* background-color: #28231D; */
     color: #28231D;
 }
 
@@ -395,7 +415,10 @@ body {
 
 .active-menu {
     display: block;
+    height: 100%;
     width: auto;
+    z-index: 100;
+    background-color: #28231D;
 }
 
 .inactive-menu {
