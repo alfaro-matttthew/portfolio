@@ -12,27 +12,38 @@ export default function HamburgerNavMenu() {
         console.log('Toggle Clicked')
         const hamList = document.getElementById('menuList');
         const hamBtn = document.getElementById('menuBtn');
+        const hamBar = document.getElementById('menuBar');
+        const hamAll = document.getElementById('menuAll');
         if (navActive) {
             hamBtn.classList.remove("active-btn");
             hamBtn.classList.add("inactive-btn");
             hamList.classList.remove("active-menu");
             hamList.classList.add("inactive-menu");
+            hamBar.classList.remove("active-bar");
+            hamBar.classList.add("menu-bar");
+            hamAll.classList.remove("active-all");
+            hamAll.classList.add("inactive-all");
         } else {
             hamBtn.classList.remove("inactive-btn");
             hamBtn.classList.add("active-btn");
             hamList.classList.remove("inactive-menu")
             hamList.classList.add("active-menu")
+            hamBar.classList.remove("menu-bar");
+            hamBar.classList.add("active-bar");
+            hamAll.classList.remove("inactive-all");
+            hamAll.classList.add("active-all");
         }
         setNavActive(!navActive);
     }
 
     return (
-        <div className="z-10">
+        <div id="menuAll" className="inactive-all">
 
-            <div className="mobile-nav-top w-100 px-4 pt-4 border">
+            <div className="menu-bar w-100 px-4 pt-4 " id="menuBar">
                 <div>
                     <Link
                         to="/"
+                        onClick={handleNavToggle}
                     >
                         <svg id="a" width="52px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 766.67 666.67">
                             <path class="b" d="M166.67,633.33c-36.82,0-66.67-29.85-66.67-66.67v-122.48c0-16.31,0-24.46-1.84-32.13-1.63-6.8-4.33-13.3-7.98-19.27-4.12-6.73-9.89-12.49-21.42-24.02l-35.42-35.42,35.42-35.42c11.53-11.53,17.3-17.3,21.42-24.02,3.66-5.97,6.35-12.47,7.98-19.27,1.84-7.67,1.84-15.83,1.84-32.13V100c0-36.82,29.85-66.67,66.67-66.67m433.33,600c36.82,0,66.67-29.85,66.67-66.67v-122.48c0-16.31,0-24.46,1.84-32.13,1.63-6.8,4.33-13.3,7.98-19.27,4.12-6.73,9.89-12.49,21.42-24.02l35.42-35.42-35.42-35.42c-11.53-11.53-17.3-17.3-21.42-24.02-3.65-5.97-6.35-12.47-7.98-19.27-1.84-7.67-1.84-15.83-1.84-32.13V100c0-36.82-29.85-66.67-66.67-66.67"/>
