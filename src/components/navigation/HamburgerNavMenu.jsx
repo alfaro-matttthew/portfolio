@@ -37,7 +37,7 @@ export default function HamburgerNavMenu() {
     }
 
     return (
-        <div id="menuAll" className="inactive-all">
+        <div id="menuAll" className="inactive-all z-10">
 
             <div className="menu-bar w-100 px-4 pt-4 " id="menuBar">
                 <div>
@@ -58,7 +58,7 @@ export default function HamburgerNavMenu() {
                 </div>
             </div>
             <div id="menuList" className="inactive-menu">
-                <ul className="mt-3">
+                <ul className="">
                     <li className="menu-item">
                         <a>
                         <Link
